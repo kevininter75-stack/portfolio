@@ -24,18 +24,25 @@ export const journey = [
   {
     number: "01",
     title: "L'hôtellerie de luxe",
-    text: "Bar manager à l'Hôtel Boucan Canot 4★ puis à l'Hôtel Le Lux 5★. Dix ans de service exigeant : rigueur, sens du détail, gestion d'équipe et obsession de l'expérience client.",
+    text: "Bar manager à l'Hôtel Boucan Canot 4★ puis à l'Hôtel Le Lux 5★. Avant ça, le bâtiment et l'immobilier : un parcours varié qui a forgé rigueur, adaptabilité et sang-froid sous pression.",
   },
   {
     number: "02",
     title: "Le déclic",
-    text: "Reconversion autodidacte vers le développement web et l'IA. Avec Claude Code comme copilote, je construis des produits complets : de l'idée au déploiement, en passant par le code.",
+    text: "La curiosité web ne date pas d'hier — première boutique en ligne montée sur Shopify dès 2016. Depuis : reconversion autodidacte vers le développement web et l'IA, avec Claude Code comme copilote, pour construire des produits complets de l'idée au déploiement.",
   },
   {
     number: "03",
     title: "La suite",
     text: "Aujourd'hui à Ti Mahi Mahi (Saint-Gilles-les-Bains), je candidate à l'alternance développement web & IA chez Beforma pour transformer cette pratique en diplôme reconnu.",
   },
+];
+
+/** Langues parlées, affichées sous la photo dans la section À propos */
+export const languages = [
+  "Français — langue maternelle",
+  "Créole — bilingue",
+  "Anglais — intermédiaire",
 ];
 
 export type Project = {
@@ -63,7 +70,14 @@ export const projects: Project[] = [
     url: "https://mindfull-topaz.vercel.app/auth",
     github: "https://github.com/kevininter75-stack/mindfull",
     screenshots: [
-      { src: "/images/projects/serene-1.png", alt: "Écran d'accueil de Sérène" },
+      {
+        src: "/images/projects/serene-1.png",
+        alt: "Accueil de Sérène : suivi de série, progression XP et check-in d'humeur",
+      },
+      {
+        src: "/images/projects/serene-2.png",
+        alt: "Parcours guidés de Sérène : programmes TCC gestion du stress et sommeil",
+      },
     ],
     mobile: true,
     accent: "#8B9FE8",

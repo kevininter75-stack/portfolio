@@ -2,7 +2,7 @@ import Image from "next/image";
 import Reveal from "@/components/ui/animations/Reveal";
 import TextReveal from "@/components/ui/animations/TextReveal";
 import ImageReveal from "@/components/ui/animations/ImageReveal";
-import { journey, profile } from "@/lib/data";
+import { journey, languages, profile } from "@/lib/data";
 
 /**
  * Parcours en étapes numérotées (01, 02, 03) façon storytelling,
@@ -19,16 +19,30 @@ export default function About() {
       </TextReveal>
 
       <div className="mt-16 grid gap-16 md:grid-cols-[1fr_1.2fr] md:gap-20">
-        {/* Photo de profil — remplacer /public/images/profile.jpg par la vraie photo */}
-        <ImageReveal className="relative h-[420px] overflow-hidden rounded-2xl md:sticky md:top-28 md:h-[520px]">
-          <Image
-            src={profile.photo}
-            alt={`Portrait de ${profile.name}`}
-            fill
-            sizes="(min-width: 768px) 40vw, 100vw"
-            className="object-cover"
-          />
-        </ImageReveal>
+        {/* Photo de profil + langues, colonne sticky sur desktop */}
+        <div className="md:sticky md:top-28 md:self-start">
+          <ImageReveal className="relative h-[420px] overflow-hidden rounded-2xl md:h-[520px]">
+            <Image
+              src={profile.photo}
+              alt={`Portrait de ${profile.name}`}
+              fill
+              sizes="(min-width: 768px) 40vw, 100vw"
+              className="object-cover"
+            />
+          </ImageReveal>
+          <Reveal delay={0.15}>
+            <ul className="mt-4 flex flex-wrap gap-2" aria-label="Langues parlées">
+              {languages.map((lang) => (
+                <li
+                  key={lang}
+                  className="rounded-full border border-ligne bg-surface px-3.5 py-1.5 text-xs font-semibold text-brume/85"
+                >
+                  {lang}
+                </li>
+              ))}
+            </ul>
+          </Reveal>
+        </div>
 
         {/* Étapes numérotées */}
         <div className="flex flex-col gap-14">
