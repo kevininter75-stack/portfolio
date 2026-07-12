@@ -6,30 +6,30 @@ import { useReducedMotion } from "@/lib/useReducedMotion";
 import { useFinePointer } from "@/lib/useFinePointer";
 
 /**
- * Curseur décoratif du portfolio (différent du Bichique) :
+ * Curseur décoratif du portfolio :
  *  - un halo lumineux menthe qui suit avec inertie — effet projecteur sur fond sombre ;
- *  - un petit viseur en croix, précis, qui passe corail et pivote de 45°
- *    sur les éléments interactifs (liens, boutons, [data-cursor]).
+ *  - un point précis en mode « difference » qui, au survol des éléments interactifs
+ *    (liens, boutons, [data-cursor]), s'agrandit en cercle et inverse ce qu'il recouvre.
  * Purement décoratif : le curseur natif reste affiché. Desktop uniquement.
  */
 export default function Cursor() {
   const halo = useRef<HTMLDivElement>(null);
-  const cross = useRef<HTMLDivElement>(null);
+  const dot = useRef<HTMLDivElement>(null);
   const reduced = useReducedMotion();
   const finePointer = useFinePointer();
   const enabled = finePointer && !reduced;
 
   useEffect(() => {
-    if (!enabled || !halo.current || !cross.current) return;
+    if (!enabled || !halo.current || !dot.current) return;
 
-    const crossX = gsap.quickTo(cross.current, "x", { duration: 0.09, ease: "power2.out" });
-    const crossY = gsap.quickTo(cross.current, "y", { duration: 0.09, ease: "power2.out" });
+    const dotX = gsap.quickTo(dot.current, "x", { duration: 0.09, ease: "power2.out" });
+    const dotY = gsap.quickTo(dot.current, "y", { duration: 0.09, ease: "power2.out" });
     const haloX = gsap.quickTo(halo.current, "x", { duration: 0.6, ease: "power3.out" });
     const haloY = gsap.quickTo(halo.current, "y", { duration: 0.6, ease: "power3.out" });
 
     const onMove = (e: MouseEvent) => {
-      crossX(e.clientX);
-      crossY(e.clientY);
+      dotX(e.clientX);
+      dotY(e.clientY);
       haloX(e.clientX);
       haloY(e.clientY);
     };
@@ -38,14 +38,24 @@ export default function Cursor() {
       t instanceof Element && !!t.closest("a, button, [data-cursor]");
 
     const onOver = (e: MouseEvent) => {
-      if (isInteractive(e.target) && cross.current && halo.current) {
-        gsap.to(cross.current, { rotation: 45, scale: 1.6, color: "#ff6b5e", duration: 0.3 });
-        gsap.to(halo.current, { scale: 1.5, opacity: 0.7, duration: 0.4 });
+      if (isInteractive(e.target) && dot.current && halo.current) {
+        gsap.to(dot.current, {
+          scale: 5,
+          backgroundColor: "#e8edf5",
+          duration: 0.35,
+          ease: "power3.out",
+        });
+        gsap.to(halo.current, { scale: 1.4, opacity: 0.6, duration: 0.4 });
       }
     };
     const onOut = (e: MouseEvent) => {
-      if (isInteractive(e.target) && cross.current && halo.current) {
-        gsap.to(cross.current, { rotation: 0, scale: 1, color: "#4fe3c1", duration: 0.3 });
+      if (isInteractive(e.target) && dot.current && halo.current) {
+        gsap.to(dot.current, {
+          scale: 1,
+          backgroundColor: "#4fe3c1",
+          duration: 0.35,
+          ease: "power3.out",
+        });
         gsap.to(halo.current, { scale: 1, opacity: 1, duration: 0.4 });
       }
     };
@@ -72,11 +82,11 @@ export default function Cursor() {
           background: "radial-gradient(circle, rgba(79,227,193,0.14) 0%, transparent 65%)",
         }}
       />
-      {/* Viseur en croix */}
-      <div ref={cross} className="absolute text-menthe">
-        <div className="absolute -ml-[7px] -mt-[1px] h-0.5 w-3.5 bg-current" />
-        <div className="absolute -ml-[1px] -mt-[7px] h-3.5 w-0.5 bg-current" />
-      </div>
+      {/* Point précis : s'agrandit et inverse les couleurs sur les éléments cliquables */}
+      <div
+        ref={dot}
+        className="absolute -ml-1 -mt-1 h-2 w-2 rounded-full bg-menthe mix-blend-difference"
+      />
     </div>
   );
 }

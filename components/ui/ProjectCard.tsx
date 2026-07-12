@@ -55,11 +55,7 @@ export default function ProjectCard({ project, index }: Props) {
         <ImageReveal
           className="relative rounded-2xl p-6"
         >
-          <div
-            className="absolute inset-0 rounded-2xl opacity-20"
-            style={{ background: `radial-gradient(500px circle at 50% 0%, ${project.accent}, transparent 70%)` }}
-            aria-hidden
-          />
+          {/* Premier enfant = le bloc des captures : c'est lui qui reçoit le dézoom d'ImageReveal */}
           <div className={`relative flex justify-center gap-4 ${project.mobile ? "" : "flex-col"}`}>
             {project.screenshots.map((shot, i) => (
               <Image
@@ -79,6 +75,12 @@ export default function ProjectCard({ project, index }: Props) {
               />
             ))}
           </div>
+          {/* Halo coloré derrière les captures (après le bloc pour ne pas être la cible du dézoom) */}
+          <div
+            className="absolute inset-0 -z-10 rounded-2xl opacity-20"
+            style={{ background: `radial-gradient(500px circle at 50% 0%, ${project.accent}, transparent 70%)` }}
+            aria-hidden
+          />
         </ImageReveal>
       </motion.div>
 
