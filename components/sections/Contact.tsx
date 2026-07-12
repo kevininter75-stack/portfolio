@@ -48,6 +48,20 @@ export default function Contact() {
             >
               github.com/{profile.githubHandle} ↗
             </a>
+            {/* Affiché seulement quand l'URL LinkedIn est renseignée dans lib/data.ts */}
+            {profile.linkedin && (
+              <>
+                <span aria-hidden className="text-ligne">|</span>
+                <a
+                  href={profile.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold transition-colors hover:text-menthe"
+                >
+                  LinkedIn ↗
+                </a>
+              </>
+            )}
           </div>
         </Reveal>
       </div>
