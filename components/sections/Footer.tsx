@@ -9,17 +9,28 @@ export default function Footer() {
           <p>© 2026 {profile.name} — La Réunion</p>
           <EasterEgg />
         </div>
-        <p>
-          Fait avec{" "}
+        <p className="flex flex-wrap items-center justify-center gap-x-2 md:justify-end">
+          <span>
+            Fait avec{" "}
+            <a
+              href="https://claude.com/claude-code"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-menthe transition-colors hover:text-corail"
+            >
+              Claude Code
+            </a>{" "}
+            — évidemment.
+          </span>
+          <span aria-hidden>·</span>
           <a
-            href="https://claude.com/claude-code"
+            href={profile.siteRepo}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-semibold text-menthe transition-colors hover:text-corail"
+            className="font-semibold transition-colors hover:text-menthe"
           >
-            Claude Code
-          </a>{" "}
-          — évidemment.
+            Code source ↗
+          </a>
         </p>
       </div>
     </footer>

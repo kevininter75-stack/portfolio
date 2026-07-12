@@ -13,11 +13,11 @@ npm run dev -- --port 3020
 
 Puis ouvrir http://localhost:3020.
 
-## Avant la mise en ligne — 1 fichier à personnaliser
+## À tenir à jour dans `lib/data.ts`
 
-1. **Photo de profil** : remplacer `public/images/profile.jpg` (placeholder actuel) par une vraie photo (portrait, ~800×1000).
-
-(Le CV PDF et le numéro de téléphone sont déjà en place.)
+- **`availability`** : le badge de disponibilité (hero + contact) — le mettre à jour quand la situation change.
+- **Photo de profil** : `public/images/profile.jpg` contient la photo extraite du CV ; la remplacer par une photo dédiée de meilleure qualité quand disponible.
+- **CV** : penser à faire correspondre l'email du CV PDF avec celui du site.
 
 Tout le contenu du site (textes, projets, compétences, liens) est centralisé dans **`lib/data.ts`**.
 

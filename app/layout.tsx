@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import SmoothScroll from "@/components/providers/SmoothScroll";
 import Cursor from "@/components/ui/Cursor";
 import { profile } from "@/lib/data";
@@ -75,6 +76,8 @@ export default function RootLayout({
         />
         <SmoothScroll>{children}</SmoothScroll>
         <Cursor />
+        {/* Statistiques de visite anonymes (actives une fois déployé sur Vercel) */}
+        <Analytics />
       </body>
     </html>
   );

@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { motion, useMotionValue, useSpring, useTransform } from "motion/react";
+import { useEffect, useRef } from "react";
+import { gsap } from "@/lib/gsap";
 import Reveal from "@/components/ui/animations/Reveal";
 import ImageReveal from "@/components/ui/animations/ImageReveal";
 import type { Project } from "@/lib/data";
@@ -14,31 +15,42 @@ type Props = {
 };
 
 /**
- * Carte projet réutilisable : numéro, pitch, badges de stack, captures réelles
- * avec tilt 3D au survol (Framer Motion), liens live + GitHub.
+ * Carte projet réutilisable : numéro, pitch, faits concrets, badges de stack,
+ * captures réelles avec tilt 3D au survol (GSAP), liens live + GitHub.
  * Alternance gauche/droite selon l'index, comme les sections du Bichique.
  */
 export default function ProjectCard({ project, index }: Props) {
+  const tiltRef = useRef<HTMLDivElement>(null);
   const reduced = useReducedMotion();
   const flipped = index % 2 === 1;
 
   // Tilt 3D : la carte s'incline légèrement vers le curseur
-  const mx = useMotionValue(0.5);
-  const my = useMotionValue(0.5);
-  const rotateX = useSpring(useTransform(my, [0, 1], [6, -6]), { stiffness: 150, damping: 20 });
-  const rotateY = useSpring(useTransform(mx, [0, 1], [-6, 6]), { stiffness: 150, damping: 20 });
+  useEffect(() => {
+    const el = tiltRef.current;
+    if (reduced || !el) return;
 
-  function onMouseMove(e: React.MouseEvent<HTMLDivElement>) {
-    if (reduced) return;
-    const rect = e.currentTarget.getBoundingClientRect();
-    mx.set((e.clientX - rect.left) / rect.width);
-    my.set((e.clientY - rect.top) / rect.height);
-  }
+    gsap.set(el, { transformPerspective: 1200 });
+    const rxTo = gsap.quickTo(el, "rotationX", { duration: 0.5, ease: "power2.out" });
+    const ryTo = gsap.quickTo(el, "rotationY", { duration: 0.5, ease: "power2.out" });
 
-  function onMouseLeave() {
-    mx.set(0.5);
-    my.set(0.5);
-  }
+    const onMove = (e: MouseEvent) => {
+      const rect = el.getBoundingClientRect();
+      rxTo(((e.clientY - rect.top) / rect.height - 0.5) * -12);
+      ryTo(((e.clientX - rect.left) / rect.width - 0.5) * 12);
+    };
+    const onLeave = () => {
+      rxTo(0);
+      ryTo(0);
+    };
+
+    el.addEventListener("mousemove", onMove);
+    el.addEventListener("mouseleave", onLeave);
+    return () => {
+      el.removeEventListener("mousemove", onMove);
+      el.removeEventListener("mouseleave", onLeave);
+      gsap.killTweensOf(el);
+    };
+  }, [reduced]);
 
   return (
     <article
@@ -47,14 +59,8 @@ export default function ProjectCard({ project, index }: Props) {
       }`}
     >
       {/* Captures d'écran réelles, avec tilt au survol */}
-      <motion.div
-        style={reduced ? undefined : { rotateX, rotateY, transformPerspective: 1200 }}
-        onMouseMove={onMouseMove}
-        onMouseLeave={onMouseLeave}
-      >
-        <ImageReveal
-          className="relative rounded-2xl p-6"
-        >
+      <div ref={tiltRef}>
+        <ImageReveal className="relative rounded-2xl p-6">
           {/* Premier enfant = le bloc des captures : c'est lui qui reçoit le dézoom d'ImageReveal */}
           <div className={`relative flex justify-center gap-4 ${project.mobile ? "" : "flex-col"}`}>
             {project.screenshots.map((shot, i) => (
@@ -82,7 +88,7 @@ export default function ProjectCard({ project, index }: Props) {
             aria-hidden
           />
         </ImageReveal>
-      </motion.div>
+      </div>
 
       {/* Texte du projet */}
       <Reveal>
@@ -93,6 +99,16 @@ export default function ProjectCard({ project, index }: Props) {
           {project.title}
         </h3>
         <p className="mt-4 max-w-lg leading-relaxed text-brume-60">{project.pitch}</p>
+
+        {/* Faits concrets : ce que le projet prouve */}
+        <ul className="mt-5 flex max-w-lg flex-col gap-2">
+          {project.highlights.map((fact) => (
+            <li key={fact} className="flex items-start gap-2.5 text-sm text-brume/85">
+              <span aria-hidden className="mt-0.5 font-bold text-menthe">✓</span>
+              {fact}
+            </li>
+          ))}
+        </ul>
 
         {/* Badges de stack */}
         <ul className="mt-6 flex flex-wrap gap-2" aria-label="Technologies utilisées">

@@ -17,7 +17,12 @@ export const profile = {
   photo: "/images/profile.jpg",
   // CV : déposer le fichier PDF dans /public/cv-kevin-intertaglia.pdf
   cvFile: "/cv-kevin-intertaglia.pdf",
+  // Code source de ce portfolio (affiché dans le footer)
+  siteRepo: "https://github.com/kevininter75-stack/portfolio",
 };
+
+/** Badge de disponibilité affiché dans le hero et le contact — à tenir à jour */
+export const availability = "En recherche d'alternance dev web & IA — disponible dès maintenant";
 
 /** Étapes numérotées du parcours, façon storytelling « Le Bichique » */
 export const journey = [
@@ -49,6 +54,8 @@ export type Project = {
   slug: string;
   title: string;
   pitch: string;
+  /** Faits concrets et vérifiables mis en avant sur la carte (2-3 max) */
+  highlights: string[];
   stack: string[];
   url: string;
   github?: string;
@@ -66,6 +73,11 @@ export const projects: Project[] = [
     title: "Sérène",
     pitch:
       "PWA de bien-être et de méditation : respirer, se recentrer, suivre sa pratique. Prototypée sur Emergent.sh puis entièrement finalisée avec Claude Code.",
+    highlights: [
+      "Prototype repris et finalisé de A à Z avec Claude Code",
+      "Gamification complète : série, XP, badges, check-in d'humeur",
+      "Installable sur téléphone (PWA)",
+    ],
     stack: ["PWA", "React", "FastAPI", "Emergent.sh", "Claude Code", "Vercel"],
     url: "https://mindfull-topaz.vercel.app/auth",
     github: "https://github.com/kevininter75-stack/mindfull",
@@ -87,6 +99,11 @@ export const projects: Project[] = [
     title: "Déclic",
     pitch:
       "Application de pratique du français conversationnel pour expatriés : des situations réelles, des dialogues guidés, une progression mesurable.",
+    highlights: [
+      "Scénarios de mise en situation + mode « Ta situation » personnalisé",
+      "Comptes utilisateurs et données sur Supabase",
+      "Automatisations back-office avec n8n",
+    ],
     stack: ["Next.js", "Supabase", "n8n", "Vercel"],
     url: "https://declic-liart.vercel.app/",
     github: "https://github.com/kevininter75-stack/declic",
@@ -102,6 +119,11 @@ export const projects: Project[] = [
     title: "Fruit Ninja Réunion",
     pitch:
       "Jeu mobile façon fruit-slicer aux couleurs de La Réunion : letchis, mangues et ananas Victoria à trancher, packagé en PWA et en app native.",
+    highlights: [
+      "Développé en 4 phases, du prototype au packaging natif Android",
+      "Physique, combos, effets de coupe et sons codés sur mesure",
+      "Deux modes de jeu (Classique 3 vies / Chrono 60 s)",
+    ],
     stack: ["Phaser 3", "TypeScript", "Vite", "Capacitor", "PWA"],
     url: "https://kevininter75-stack.github.io/fruit-ninja-reunion/",
     github: "https://github.com/kevininter75-stack/fruit-ninja-reunion",
@@ -117,6 +139,11 @@ export const projects: Project[] = [
     title: "Le Bichique",
     pitch:
       "Site vitrine d'un restaurant fictif au port de Saint-Gilles : un exercice de storytelling en scroll, de motion design et de design system soigné.",
+    highlights: [
+      "Conçu à partir d'un cahier des charges complet, comme pour un vrai client",
+      "Design system, animations GSAP et smooth scroll sur mesure",
+      "Le socle technique qui a servi de base à ce portfolio",
+    ],
     stack: ["Next.js", "GSAP", "Lenis", "Tailwind CSS"],
     url: "https://le-bichique.vercel.app/",
     screenshots: [
@@ -142,6 +169,25 @@ export const skills = [
   "Capacitor",
   "Git / GitHub",
   "Claude Code",
+];
+
+/** Étapes de la section « Ma méthode » : comment je travaille avec l'IA */
+export const method = [
+  {
+    number: "01",
+    title: "Je cadre",
+    text: "L'idée, le besoin, le cahier des charges : je définis quoi construire et pourquoi, je découpe le projet en phases livrables. C'est le même réflexe qu'au bar — la mise en place avant le service.",
+  },
+  {
+    number: "02",
+    title: "Je construis avec l'IA",
+    text: "Claude Code écrit vite ; moi je pilote. Choix techniques, revue de chaque fonctionnalité, tests sur de vrais appareils, itérations jusqu'à ce que ce soit propre. L'IA est un accélérateur, pas un pilote automatique.",
+  },
+  {
+    number: "03",
+    title: "Je livre",
+    text: "Déploiement en production (Vercel, PWA, stores), corrections après retours, et amélioration continue. Un projet n'est terminé que quand quelqu'un peut s'en servir.",
+  },
 ];
 
 /** Mots du bandeau défilant du hero */

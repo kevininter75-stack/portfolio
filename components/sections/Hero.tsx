@@ -3,20 +3,40 @@
 import { useEffect, useRef } from "react";
 import { gsap, SplitText } from "@/lib/gsap";
 import { useReducedMotion } from "@/lib/useReducedMotion";
+import { useFinePointer } from "@/lib/useFinePointer";
 import Magnetic from "@/components/ui/animations/Magnetic";
 import Marquee from "@/components/ui/animations/Marquee";
-import { marqueeWords, profile } from "@/lib/data";
+import { availability, marqueeWords, profile } from "@/lib/data";
 
 /** Hero plein écran : titre révélé mot à mot au chargement, CTA, bandeau défilant. */
 export default function Hero() {
   const root = useRef<HTMLDivElement>(null);
   const reduced = useReducedMotion();
+  const fine = useFinePointer();
 
   useEffect(() => {
     const el = root.current;
     if (reduced || !el) return;
     const title = el.querySelector("h1");
     if (!title) return;
+
+    // Sur tactile/mobile : entrée légère sans SplitText, et surtout sans
+    // toucher à l'opacité du titre — c'est l'élément LCP, le masquer par JS
+    // retarderait sa "peinture" aux yeux des Core Web Vitals.
+    if (!fine) {
+      const tl = gsap.timeline({ delay: 0.1 });
+      tl.from(title, { y: 24, duration: 0.7, ease: "power3.out" }).from(
+        el.querySelectorAll("[data-hero-fade]"),
+        { y: 20, autoAlpha: 0, duration: 0.7, stagger: 0.1, ease: "power3.out" },
+        "-=0.4"
+      );
+      return () => {
+        // revert() restaure les styles d'origine (kill() laisserait un état partiel
+        // quand l'effet se rejoue au passage fine=false → true après hydratation)
+        tl.revert();
+      };
+    }
+
     const split = SplitText.create(title, { type: "lines", mask: "lines", autoSplit: true });
     const tl = gsap.timeline({ delay: 0.15 });
     tl.from(split.lines, {
@@ -30,16 +50,26 @@ export default function Hero() {
       "-=0.5"
     );
     return () => {
-      tl.kill();
+      tl.revert();
       split.revert();
     };
-  }, [reduced]);
+  }, [reduced, fine]);
 
   return (
     <section ref={root} className="halo relative flex min-h-svh flex-col justify-between pt-24">
       <div className="mx-auto flex w-full max-w-6xl grow flex-col justify-center px-6">
-        <p data-hero-fade className="mb-6 text-sm font-semibold uppercase tracking-[0.25em] text-menthe">
+        <p data-hero-fade className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-menthe">
           {profile.name} — {profile.location}
+        </p>
+        {/* Badge de disponibilité : l'info que tout recruteur cherche en premier */}
+        <p data-hero-fade className="mb-6">
+          <span className="inline-flex items-center gap-2.5 rounded-full border border-menthe/30 bg-menthe/10 px-4 py-2 text-sm font-semibold text-brume">
+            <span className="relative flex h-2.5 w-2.5">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-menthe opacity-60" />
+              <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-menthe" />
+            </span>
+            {availability}
+          </span>
         </p>
         <h1 className="font-display max-w-4xl text-[clamp(2.6rem,7vw,5.5rem)] font-bold leading-[1.02] tracking-tight">
           De l&apos;hôtellerie de luxe au{" "}

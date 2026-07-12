@@ -1,7 +1,7 @@
 import Reveal from "@/components/ui/animations/Reveal";
 import TextReveal from "@/components/ui/animations/TextReveal";
 import Magnetic from "@/components/ui/animations/Magnetic";
-import { profile } from "@/lib/data";
+import { availability, profile } from "@/lib/data";
 
 /** Contact simple et direct : email, téléphone, GitHub. Pas de formulaire. */
 export default function Contact() {
@@ -16,7 +16,7 @@ export default function Contact() {
         </TextReveal>
         <Reveal>
           <p className="mx-auto mt-6 max-w-xl text-brume-60">
-            Alternance, projet, ou simple question : ma porte est ouverte.
+            {availability} · {profile.location}
           </p>
         </Reveal>
 
