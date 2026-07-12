@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio — Kévin Intertaglia
 
-## Getting Started
+Site portfolio personnel : vitrine de mon parcours (hôtellerie de luxe → développement web & IA) et de mes 4 projets construits avec Claude Code.
 
-First, run the development server:
+**Stack** : Next.js 16 (App Router) · TypeScript · Tailwind CSS v4 · GSAP + ScrollTrigger + SplitText · Lenis (smooth scroll) · Framer Motion (`motion`).
+
+## Démarrer en local
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev -- --port 3020
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Puis ouvrir http://localhost:3020.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Avant la mise en ligne — 3 fichiers à personnaliser
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Photo de profil** : remplacer `public/images/profile.jpg` (placeholder actuel) par une vraie photo (portrait, ~800×1000).
+2. **CV** : remplacer `public/cv-kevin-intertaglia.pdf` (placeholder actuel) par le vrai CV.
+3. **Numéro de téléphone** : dans `lib/data.ts`, remplacer `phone` et `phoneDisplay` par le vrai numéro.
 
-## Learn More
+Tout le contenu du site (textes, projets, compétences, liens) est centralisé dans **`lib/data.ts`**.
 
-To learn more about Next.js, take a look at the following resources:
+## Déployer sur Vercel
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Pousser le repo sur GitHub (compte `kevininter75-stack`).
+2. Sur [vercel.com](https://vercel.com) : **Add New → Project**, importer le repo, cliquer **Deploy** (aucun réglage nécessaire, Next.js est détecté automatiquement).
+3. Une fois l'URL définitive connue (ex. `kevin-intertaglia.vercel.app`), vérifier qu'elle correspond bien à `metadataBase` dans `app/layout.tsx` ainsi qu'aux URLs de `app/robots.ts` et `app/sitemap.ts`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Scripts utiles
 
-## Deploy on Vercel
+- `scripts/capture-screenshots.mjs` — reprend de vraies captures d'écran des 4 projets en ligne (Playwright).
+- `scripts/capture-extra.mjs` / `scripts/capture-fruit-ninja-game.mjs` — captures avec interaction (page scénarios de Déclic, partie de Fruit Ninja) + compression.
+- `scripts/make-placeholders.mjs` — régénère la photo et le CV placeholder.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Structure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+app/                  layout (fonts, SEO, JSON-LD), page, robots, sitemap
+components/
+  sections/           Hero, About, Projects, Skills, Contact, Footer
+  ui/                 Nav, ProjectCard (carte réutilisable des 4 projets)
+  ui/animations/      Marquee, Reveal, TextReveal, Parallax, ImageReveal, Magnetic
+  providers/          SmoothScroll (Lenis + ScrollTrigger)
+lib/                  data.ts (contenu), gsap.ts, useReducedMotion.ts
+public/images/        photo de profil + captures des projets
+```
+
+---
+
+Fait avec [Claude Code](https://claude.com/claude-code) — évidemment.
