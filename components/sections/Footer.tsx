@@ -1,10 +1,14 @@
 import { profile } from "@/lib/data";
+import EasterEgg from "@/components/ui/EasterEgg";
 
 export default function Footer() {
   return (
     <footer className="border-t border-ligne py-8">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-6 text-sm text-brume-60 md:flex-row">
-        <p>© 2026 {profile.name} — La Réunion</p>
+        <div className="flex items-center gap-3">
+          <p>© 2026 {profile.name} — La Réunion</p>
+          <EasterEgg />
+        </div>
         <p>
           Fait avec{" "}
           <a

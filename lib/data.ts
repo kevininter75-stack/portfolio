@@ -8,9 +8,8 @@ export const profile = {
   firstName: "Kévin",
   role: "Développeur web & IA en reconversion",
   location: "Saint-Gilles-les-Bains, La Réunion",
-  // ⚠️ Remplacer par le vrai numéro avant mise en ligne
-  phone: "+262 6 92 00 00 00",
-  phoneDisplay: "0692 00 00 00",
+  phone: "+262692319616",
+  phoneDisplay: "0692 31 96 16",
   email: "kevin.inter75@gmail.com",
   github: "https://github.com/kevininter75-stack",
   githubHandle: "kevininter75-stack",

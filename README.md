@@ -13,11 +13,11 @@ npm run dev -- --port 3020
 
 Puis ouvrir http://localhost:3020.
 
-## Avant la mise en ligne — 3 fichiers à personnaliser
+## Avant la mise en ligne — 1 fichier à personnaliser
 
 1. **Photo de profil** : remplacer `public/images/profile.jpg` (placeholder actuel) par une vraie photo (portrait, ~800×1000).
-2. **CV** : remplacer `public/cv-kevin-intertaglia.pdf` (placeholder actuel) par le vrai CV.
-3. **Numéro de téléphone** : dans `lib/data.ts`, remplacer `phone` et `phoneDisplay` par le vrai numéro.
+
+(Le CV PDF et le numéro de téléphone sont déjà en place.)
 
 Tout le contenu du site (textes, projets, compétences, liens) est centralisé dans **`lib/data.ts`**.
 
