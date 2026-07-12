@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+:root {
+  /* Palette « lagon la nuit » — sombre, tech, avec un écho aux couleurs de l'île */
+  --nuit: #0a0e14; /* fond principal, encre nuit */
+  --surface: #111722; /* cartes et surfaces légèrement relevées */
+  --surface-2: #1a2230; /* survols, bordures pleines */
+  --brume: #e8edf5; /* texte principal sur fond sombre */
+  --brume-60: #8a94a6; /* texte secondaire */
+  --menthe: #4fe3c1; /* accent principal — le lagon */
+  --corail: #ff6b5e; /* accent secondaire — clin d'œil au Bichique */
+  --or: #f2b950; /* touches dorées ponctuelles */
+  --ligne: rgba(232, 237, 245, 0.1); /* traits et séparateurs */
+}
+
+@theme inline {
+  --color-nuit: var(--nuit);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-brume: var(--brume);
+  --color-brume-60: var(--brume-60);
+  --color-menthe: var(--menthe);
+  --color-corail: var(--corail);
+  --color-or: var(--or);
+  --color-ligne: var(--ligne);
+  --font-display: var(--font-space-grotesk);
+  --font-sans: var(--font-inter);
+}
+
+body {
+  background: var(--nuit);
+  color: var(--brume);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--menthe);
+  color: var(--nuit);
+}
+
+/* Focus clavier toujours visible, aux couleurs du site */
+:focus-visible {
+  outline: 3px solid var(--menthe);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Halos lumineux d'arrière-plan (dégradés radiaux fixes, zéro JS) */
+.halo {
+  background:
+    radial-gradient(600px circle at 15% 20%, rgba(79, 227, 193, 0.09), transparent 60%),
+    radial-gradient(700px circle at 85% 70%, rgba(255, 107, 94, 0.07), transparent 60%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
