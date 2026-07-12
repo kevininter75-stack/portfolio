@@ -21,7 +21,8 @@ export default function ImageReveal({ children, className, delay = 0 }: Props) {
     const img = el.firstElementChild;
     if (!img) return;
     const tl = gsap.timeline({
-      scrollTrigger: { trigger: el, start: "top 85%", once: true },
+      // Rejouable à chaque passage (voir Reveal)
+      scrollTrigger: { trigger: el, start: "top 85%", toggleActions: "play none none reverse" },
       delay,
     });
     tl.fromTo(

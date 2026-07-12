@@ -27,7 +27,8 @@ export default function TextReveal({ children, as = "h2", className, delay = 0 }
       stagger: 0.09,
       ease: "power4.out",
       delay,
-      scrollTrigger: { trigger: el, start: "top 88%", once: true },
+      // Rejouable à chaque passage (voir Reveal)
+      scrollTrigger: { trigger: el, start: "top 88%", toggleActions: "play none none reverse" },
     });
     return () => {
       tween.scrollTrigger?.kill();

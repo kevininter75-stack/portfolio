@@ -29,7 +29,9 @@ export default function Reveal({ children, className, delay = 0, y = 44 }: Props
         duration: 1.05,
         ease: "power3.out",
         delay,
-        scrollTrigger: { trigger: el, start: "top 90%", once: true },
+        // Rejouable : play à chaque entrée, reverse (réarmement) quand
+        // l'élément ressort par le bas du viewport en remontant
+        scrollTrigger: { trigger: el, start: "top 90%", toggleActions: "play none none reverse" },
       }
     );
     return () => {
