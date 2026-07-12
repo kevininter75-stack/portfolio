@@ -13,9 +13,7 @@ export const profile = {
   email: "kevin.inter@hotmail.fr",
   github: "https://github.com/kevininter75-stack",
   githubHandle: "kevininter75-stack",
-  // Coller ici l'URL LinkedIn (app LinkedIn → Profil → ⋯ → « Partager le profil »)
-  // Exemple : "https://www.linkedin.com/in/kevin-intertaglia-123456"
-  linkedin: "",
+  linkedin: "https://www.linkedin.com/in/kévin-intertaglia-0a3aab221",
   // Photo de profil : déposer le fichier dans /public/images/profile.jpg
   photo: "/images/profile.jpg",
   // CV : déposer le fichier PDF dans /public/cv-kevin-intertaglia.pdf
