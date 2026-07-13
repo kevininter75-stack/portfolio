@@ -145,6 +145,7 @@ export const projects: Project[] = [
     ],
     stack: ["Next.js", "GSAP", "Lenis", "Tailwind CSS"],
     url: "https://le-bichique.vercel.app/",
+    github: "https://github.com/kevininter75-stack/le-bichique",
     screenshots: [
       { src: "/images/projects/bichique-1.jpg", alt: "Hero du site Le Bichique" },
       { src: "/images/projects/bichique-2.jpg", alt: "Section storytelling du Bichique" },
