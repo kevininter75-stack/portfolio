@@ -13,7 +13,7 @@ const jsonLd = {
   name: profile.name,
   jobTitle: "Développeur web & IA (en reconversion)",
   email: `mailto:${profile.email}`,
-  url: "https://portfolio-sepia-pi-64.vercel.app",
+  url: "https://kevin-intertaglia.vercel.app",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Saint-Gilles-les-Bains",
@@ -34,7 +34,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://portfolio-sepia-pi-64.vercel.app"),
+  metadataBase: new URL("https://kevin-intertaglia.vercel.app"),
   title: "Kévin Intertaglia — Développeur web & IA | Portfolio",
   description:
     "De l'hôtellerie de luxe au développement web assisté par IA. Portfolio de Kévin Intertaglia : 4 projets construits de A à Z avec Claude Code — PWA, Next.js, Supabase, Phaser. La Réunion.",
