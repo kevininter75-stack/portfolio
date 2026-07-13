@@ -6,7 +6,7 @@ import { useReducedMotion } from "@/lib/useReducedMotion";
 import { useFinePointer } from "@/lib/useFinePointer";
 import Magnetic from "@/components/ui/animations/Magnetic";
 import Marquee from "@/components/ui/animations/Marquee";
-import { availability, marqueeWords, profile } from "@/lib/data";
+import { marqueeWords, profile } from "@/lib/data";
 
 /** Hero plein écran : titre révélé mot à mot au chargement, CTA, bandeau défilant. */
 export default function Hero() {
@@ -58,18 +58,8 @@ export default function Hero() {
   return (
     <section ref={root} className="halo relative flex min-h-svh flex-col justify-between pt-24">
       <div className="mx-auto flex w-full max-w-6xl grow flex-col justify-center px-6">
-        <p data-hero-fade className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-menthe">
+        <p data-hero-fade className="mb-6 text-sm font-semibold uppercase tracking-[0.25em] text-menthe">
           {profile.name} — {profile.location}
-        </p>
-        {/* Badge de disponibilité : l'info que tout recruteur cherche en premier */}
-        <p data-hero-fade className="mb-6">
-          <span className="inline-flex items-center gap-2.5 rounded-full border border-menthe/30 bg-menthe/10 px-4 py-2 text-sm font-semibold text-brume">
-            <span className="relative flex h-2.5 w-2.5">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-menthe opacity-60" />
-              <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-menthe" />
-            </span>
-            {availability}
-          </span>
         </p>
         <h1 className="font-display max-w-4xl text-[clamp(2.6rem,7vw,5.5rem)] font-bold leading-[1.02] tracking-tight">
           De l&apos;hôtellerie de luxe au{" "}

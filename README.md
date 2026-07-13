@@ -13,9 +13,9 @@ npm run dev -- --port 3020
 
 Puis ouvrir http://localhost:3020.
 
-## À tenir à jour dans `lib/data.ts`
+## À tenir à jour
 
-- **`availability`** : le badge de disponibilité (hero + contact) — le mettre à jour quand la situation change.
+- **Contenu** : tout est centralisé dans `lib/data.ts` (textes, projets, liens).
 - **Photo de profil** : `public/images/profile.jpg` contient la photo extraite du CV ; la remplacer par une photo dédiée de meilleure qualité quand disponible.
 - **CV** : penser à faire correspondre l'email du CV PDF avec celui du site.
 

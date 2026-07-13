@@ -22,15 +22,13 @@ export const profile = {
   siteRepo: "https://github.com/kevininter75-stack/portfolio",
 };
 
-/** Badge de disponibilité affiché dans le hero et le contact — à tenir à jour */
-export const availability = "En recherche d'alternance dev web & IA — disponible dès maintenant";
 
 /** Étapes numérotées du parcours, façon storytelling « Le Bichique » */
 export const journey = [
   {
     number: "01",
     title: "L'hôtellerie de luxe",
-    text: "Bar manager à l'Hôtel Boucan Canot 4★ puis à l'Hôtel Le Lux 5★. Avant ça, le bâtiment et l'immobilier : un parcours varié qui a forgé rigueur, adaptabilité et sang-froid sous pression.",
+    text: "Barman à l'Hôtel Boucan Canot 4★, après des débuts au service de l'Hôtel Le Lux 5★. Avant ça, le bâtiment et l'immobilier : un parcours varié qui a forgé rigueur, adaptabilité et sang-froid sous pression.",
   },
   {
     number: "02",
@@ -40,7 +38,7 @@ export const journey = [
   {
     number: "03",
     title: "La suite",
-    text: "Aujourd'hui à Ti Mahi Mahi (Saint-Gilles-les-Bains), je candidate à l'alternance développement web & IA chez Beforma pour transformer cette pratique en diplôme reconnu.",
+    text: "Aujourd'hui responsable de bar à Ti Mahi Mahi (Saint-Gilles-les-Bains), je continue d'apprendre en construisant : chaque nouveau projet monte d'un cran en complexité. La suite s'écrit ligne par ligne.",
   },
 ];
 
@@ -177,7 +175,7 @@ export const method = [
   {
     number: "01",
     title: "Je cadre",
-    text: "L'idée, le besoin, le cahier des charges : je définis quoi construire et pourquoi, je découpe le projet en phases livrables. C'est le même réflexe qu'au bar — la mise en place avant le service.",
+    text: "L'idée, le besoin, le cahier des charges : je définis quoi construire et pourquoi, je découpe le projet en étapes concrètes. C'est le même réflexe qu'au bar — la mise en place avant le service.",
   },
   {
     number: "02",
@@ -186,7 +184,7 @@ export const method = [
   },
   {
     number: "03",
-    title: "Je livre",
+    title: "Je mets en ligne",
     text: "Déploiement en production (Vercel, PWA, stores), corrections après retours, et amélioration continue. Un projet n'est terminé que quand quelqu'un peut s'en servir.",
   },
 ];

@@ -1,7 +1,7 @@
 import Reveal from "@/components/ui/animations/Reveal";
 import TextReveal from "@/components/ui/animations/TextReveal";
 import Magnetic from "@/components/ui/animations/Magnetic";
-import { availability, profile } from "@/lib/data";
+import { profile } from "@/lib/data";
 
 /** Contact simple et direct : email, téléphone, GitHub. Pas de formulaire. */
 export default function Contact() {
@@ -12,11 +12,12 @@ export default function Contact() {
           as="h2"
           className="font-display mx-auto max-w-3xl text-[clamp(2.2rem,6vw,4.5rem)] font-bold leading-tight tracking-tight"
         >
-          On construit quelque chose <span className="text-menthe">ensemble</span> ?
+          Envie d&apos;<span className="text-menthe">échanger</span> ?
         </TextReveal>
         <Reveal>
           <p className="mx-auto mt-6 max-w-xl text-brume-60">
-            {availability} · {profile.location}
+            Mes projets, ma méthode, le dev assisté par IA : ma porte est ouverte. ·{" "}
+            {profile.location}
           </p>
         </Reveal>
 

@@ -4,7 +4,7 @@ import { method, profile } from "@/lib/data";
 
 /**
  * « Ma méthode » : transparence sur le travail avec l'IA — ce que je pilote,
- * ce que l'IA accélère. L'argument clé pour une alternance dev & IA.
+ * ce que l'IA accélère.
  */
 export default function Method() {
   return (
