@@ -1,10 +1,10 @@
 import { profile } from "@/lib/data";
 
 const links = [
+  { href: "#ia", label: "IA en entreprise" },
   { href: "#a-propos", label: "À propos" },
   { href: "#projets", label: "Projets" },
   { href: "#methode", label: "Méthode" },
-  { href: "#competences", label: "Compétences" },
   { href: "#contact", label: "Contact" },
 ];
 

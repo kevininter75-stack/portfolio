@@ -61,10 +61,10 @@ export default function OgImage() {
           >
             {(
               [
-                ["De l'hôtellerie de luxe au", "#e8edf5"],
-                ["développement web", "#4fe3c1"],
-                ["assisté par", "#e8edf5"],
-                ["IA.", "#ff6b5e"],
+                ["Mettre", "#e8edf5"],
+                ["l'IA", "#ff6b5e"],
+                ["au travail", "#e8edf5"],
+                ["dans votre entreprise.", "#4fe3c1"],
               ] as const
             ).flatMap(([fragment, color]) =>
               fragment.split(" ").map((word, i) => (
@@ -75,7 +75,7 @@ export default function OgImage() {
             )}
           </div>
           <div style={{ fontSize: 28, color: "#8a94a6" }}>
-            4 projets déployés · Next.js · TypeScript · Claude Code — La Réunion
+            Freelance · Intégration IA · Automatisations · Sites web — La Réunion
           </div>
         </div>
       </div>

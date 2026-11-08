@@ -4,7 +4,7 @@ import Reveal from "@/components/ui/animations/Reveal";
 import ProjectCard from "@/components/ui/ProjectCard";
 import { projects } from "@/lib/data";
 
-/** Le cœur du site : les 4 projets, en cartes alternées gauche/droite. */
+/** Le cœur du site : mes projets, en cartes alternées gauche/droite. */
 export default function Projects() {
   return (
     <section id="projets" className="scroll-mt-24 border-t border-ligne py-28 md:py-36">
@@ -13,7 +13,7 @@ export default function Projects() {
           as="h2"
           className="font-display max-w-3xl text-[clamp(2rem,5vw,3.5rem)] font-bold leading-tight tracking-tight"
         >
-          Quatre produits. <span className="text-corail">De l&apos;idée au déploiement.</span>
+          Mes réalisations. <span className="text-corail">De l&apos;idée au déploiement.</span>
         </TextReveal>
         <Reveal>
           <p className="mt-6 max-w-xl text-brume-60">

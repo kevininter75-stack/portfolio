@@ -6,7 +6,7 @@
 export const profile = {
   name: "Kévin Intertaglia",
   firstName: "Kévin",
-  role: "Développeur web & IA en reconversion",
+  role: "Développeur freelance — IA en entreprise & sites web",
   location: "Saint-Gilles-les-Bains, La Réunion",
   phone: "+262692319616",
   phoneDisplay: "0692 31 96 16",
@@ -28,17 +28,17 @@ export const journey = [
   {
     number: "01",
     title: "L'hôtellerie de luxe",
-    text: "Barman à l'Hôtel Boucan Canot 4★, après des débuts au service de l'Hôtel Le Lux 5★. Avant ça, le bâtiment et l'immobilier : un parcours varié qui a forgé rigueur, adaptabilité et sang-froid sous pression.",
+    text: "Le service à l'Hôtel Le Lux 5★, le bar à l'Hôtel Boucan Canot 4★, puis la responsabilité du bar de Ti Mahi Mahi à Saint-Gilles. Avant ça, le bâtiment et l'immobilier. Des années de terrain qui m'ont appris à comprendre comment une équipe travaille vraiment.",
   },
   {
     number: "02",
     title: "Le déclic",
-    text: "La curiosité web ne date pas d'hier — première boutique en ligne montée sur Shopify dès 2016. Depuis : reconversion autodidacte vers le développement web et l'IA, avec Claude Code comme copilote, pour construire des produits complets de l'idée au déploiement.",
+    text: "La curiosité web ne date pas d'hier : première boutique en ligne sur Shopify dès 2016. Puis la reconversion, en autodidacte, vers le développement web et l'IA. Applications, jeux, sites : des produits complets, de l'idée à la mise en ligne.",
   },
   {
     number: "03",
-    title: "La suite",
-    text: "Aujourd'hui responsable de bar à Ti Mahi Mahi (Saint-Gilles-les-Bains), je continue d'apprendre en construisant : chaque nouveau projet monte d'un cran en complexité. La suite s'écrit ligne par ligne.",
+    title: "À mon compte",
+    text: "Je me suis lancé en freelance fin 2026. J'aide les entreprises à intégrer l'IA dans leur quotidien et je crée des sites web. Mon regard d'ancien du terrain fait la différence : je pars du métier et des gens, pas de la technologie.",
   },
 ];
 
@@ -68,6 +68,46 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: "declic",
+    title: "Déclic",
+    pitch:
+      "Application de pratique du français conversationnel pour expatriés, avec une IA intégrée au cœur du produit : situations réelles, corrections personnalisées, progression mesurable.",
+    highlights: [
+      "Coach de correction et scénarios personnalisés générés par l'API Claude",
+      "Comptes utilisateurs et données sur Supabase",
+      "Automatisations back-office avec n8n",
+    ],
+    stack: ["Next.js", "API Claude", "Supabase", "n8n", "Vercel"],
+    url: "https://declic-liart.vercel.app/",
+    github: "https://github.com/kevininter75-stack/declic",
+    screenshots: [
+      { src: "/images/projects/declic-1.png", alt: "Page d'accueil de Déclic" },
+      { src: "/images/projects/declic-2.png", alt: "Interface de conversation de Déclic" },
+    ],
+    mobile: false,
+    accent: "#F2B950",
+  },
+  {
+    slug: "kout-sab",
+    title: "Kout Sab'",
+    pitch:
+      "« Un coup de sabre », en créole. Jeu mobile de fruits péi à trancher, né d'un prototype et devenu un vrai jeu : classement en ligne, défi quotidien, musique maloya, installable sur téléphone.",
+    highlights: [
+      "Classement en ligne sur Supabase, avec pseudos et garde-fous anti-triche",
+      "Défi du jour : une règle et un objectif différents chaque jour",
+      "PWA jouable hors ligne + application Android (Capacitor)",
+    ],
+    stack: ["Phaser 3", "TypeScript", "Supabase", "Vite", "Capacitor", "PWA"],
+    url: "https://kevininter75-stack.github.io/fruit-ninja-reunion/",
+    github: "https://github.com/kevininter75-stack/fruit-ninja-reunion",
+    screenshots: [
+      { src: "/images/projects/kout-sab-1.png", alt: "Menu de Kout Sab' : modes Classique, Chrono et Défi du jour" },
+      { src: "/images/projects/kout-sab-2.png", alt: "Partie en cours de Kout Sab'" },
+    ],
+    mobile: true,
+    accent: "#7ED957",
+  },
+  {
     slug: "serene",
     title: "Sérène",
     pitch:
@@ -92,46 +132,6 @@ export const projects: Project[] = [
     ],
     mobile: true,
     accent: "#8B9FE8",
-  },
-  {
-    slug: "declic",
-    title: "Déclic",
-    pitch:
-      "Application de pratique du français conversationnel pour expatriés : des situations réelles, des dialogues guidés, une progression mesurable.",
-    highlights: [
-      "Scénarios de mise en situation + mode « Ta situation » personnalisé",
-      "Comptes utilisateurs et données sur Supabase",
-      "Automatisations back-office avec n8n",
-    ],
-    stack: ["Next.js", "Supabase", "n8n", "Vercel"],
-    url: "https://declic-liart.vercel.app/",
-    github: "https://github.com/kevininter75-stack/declic",
-    screenshots: [
-      { src: "/images/projects/declic-1.png", alt: "Page d'accueil de Déclic" },
-      { src: "/images/projects/declic-2.png", alt: "Interface de conversation de Déclic" },
-    ],
-    mobile: false,
-    accent: "#F2B950",
-  },
-  {
-    slug: "fruit-ninja-reunion",
-    title: "Fruit Ninja Réunion",
-    pitch:
-      "Jeu mobile façon fruit-slicer aux couleurs de La Réunion : letchis, mangues et ananas Victoria à trancher, packagé en PWA et en app native.",
-    highlights: [
-      "Développé en 4 phases, du prototype au packaging natif Android",
-      "Physique, combos, effets de coupe et sons codés sur mesure",
-      "Deux modes de jeu (Classique 3 vies / Chrono 60 s)",
-    ],
-    stack: ["Phaser 3", "TypeScript", "Vite", "Capacitor", "PWA"],
-    url: "https://kevininter75-stack.github.io/fruit-ninja-reunion/",
-    github: "https://github.com/kevininter75-stack/fruit-ninja-reunion",
-    screenshots: [
-      { src: "/images/projects/fruit-ninja-1.png", alt: "Écran titre de Fruit Ninja Réunion" },
-      { src: "/images/projects/fruit-ninja-2.png", alt: "Partie en cours de Fruit Ninja Réunion" },
-    ],
-    mobile: true,
-    accent: "#7ED957",
   },
   {
     slug: "le-bichique",
@@ -163,12 +163,14 @@ export const skills = [
   "Tailwind CSS",
   "Supabase",
   "Phaser 3",
-  "Three.js",
+  "API Claude",
   "n8n",
+  "Make",
   "Vite",
   "Capacitor",
   "Git / GitHub",
   "Claude Code",
+  "Claude pour les équipes",
 ];
 
 /** Étapes de la section « Ma méthode » : comment je travaille avec l'IA */
@@ -192,10 +194,55 @@ export const method = [
 
 /** Mots du bandeau défilant du hero */
 export const marqueeWords = [
+  "IA en entreprise",
+  "Automatisations",
+  "Sites web",
+  "Claude",
   "Next.js",
-  "TypeScript",
-  "Claude Code",
   "La Réunion",
-  "Idée → Code → Déploiement",
-  "Dev assisté par IA",
+  "Freelance",
+];
+
+/** Section « IA en entreprise » : ce que l'IA apporte concrètement */
+export const aiBenefits = [
+  {
+    title: "Du temps rendu aux équipes",
+    text: "Comptes rendus, réponses aux emails, devis, fiches produits, saisie : l'IA prépare le premier jet, la personne relit et valide. Les tâches répétitives fondent.",
+  },
+  {
+    title: "Des clients mieux servis",
+    text: "Réponses plus rapides et plus soignées, en français comme en anglais. Un atout direct pour le tourisme, la location et le commerce à La Réunion.",
+  },
+  {
+    title: "Vos documents qui répondent",
+    text: "Procédures, contrats, catalogues, historiques : l'IA retrouve l'information et la résume en quelques secondes, au lieu de fouiller des dossiers.",
+  },
+  {
+    title: "Des outils qui se parlent",
+    text: "Boîte mail, agenda, documents partagés, CRM : des automatisations relient vos outils pour que l'information circule sans copier-coller.",
+  },
+];
+
+/** Offres freelance, de l'audit à la mise en place */
+export const services = [
+  {
+    number: "01",
+    title: "Diagnostic IA",
+    text: "On regarde ensemble comment votre équipe travaille au quotidien. Je repère où l'IA fait gagner du temps pour de vrai, et je vous remets une feuille de route claire et priorisée.",
+  },
+  {
+    number: "02",
+    title: "Mise en place & formation",
+    text: "Déploiement de Claude pour votre équipe : comptes, espaces de travail partagés, consignes adaptées à votre métier, connexion à vos outils. Puis formation, pour que chacun s'en serve bien et en sécurité.",
+  },
+  {
+    number: "03",
+    title: "Automatisations sur mesure",
+    text: "Des assistants et des flux automatisés branchés sur vos outils (n8n, Make, API Claude) pour supprimer les tâches répétitives qui mangent vos journées.",
+  },
+  {
+    number: "04",
+    title: "Sites web",
+    text: "Sites vitrines et boutiques en ligne modernes, rapides et bien référencés, conçus pour donner confiance et convertir.",
+  },
 ];

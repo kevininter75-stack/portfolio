@@ -12,11 +12,11 @@ export default function Contact() {
           as="h2"
           className="font-display mx-auto max-w-3xl text-[clamp(2.2rem,6vw,4.5rem)] font-bold leading-tight tracking-tight"
         >
-          Envie d&apos;<span className="text-menthe">échanger</span> ?
+          Un projet <span className="text-menthe">en tête</span> ?
         </TextReveal>
         <Reveal>
           <p className="mx-auto mt-6 max-w-xl text-brume-60">
-            Mes projets, ma méthode, le dev assisté par IA : ma porte est ouverte. ·{" "}
+            Intégrer l&apos;IA dans votre équipe, automatiser une tâche, créer votre site : parlons-en. Premier échange sans engagement. ·{" "}
             {profile.location}
           </p>
         </Reveal>

@@ -62,29 +62,29 @@ export default function Hero() {
           {profile.name} — {profile.location}
         </p>
         <h1 className="font-display max-w-4xl text-[clamp(2.6rem,7vw,5.5rem)] font-bold leading-[1.02] tracking-tight">
-          De l&apos;hôtellerie de luxe au{" "}
-          <span className="text-menthe">développement web</span> assisté par{" "}
-          <span className="text-corail">IA</span>.
+          Mettre l&apos;<span className="text-corail">IA</span> au travail{" "}
+          <span className="text-menthe">dans votre entreprise</span>.
         </h1>
         <p data-hero-fade className="mt-8 max-w-xl text-lg text-brume-60">
-          Bar manager le jour, développeur autodidacte le reste du temps. Je construis des
-          produits complets — de l&apos;idée au déploiement — avec Claude Code comme copilote.
+          Développeur freelance à La Réunion. J&apos;intègre l&apos;IA dans le quotidien des
+          équipes, j&apos;automatise ce qui fait perdre du temps et je crée des sites web.
+          Ancien de l&apos;hôtellerie de luxe : je pars du terrain, pas de la technologie.
         </p>
         <div data-hero-fade className="mt-10 flex flex-wrap items-center gap-4">
           <Magnetic>
             <a
-              href="#projets"
+              href="#ia"
               className="inline-block rounded-full bg-menthe px-8 py-4 font-semibold text-nuit transition-colors hover:bg-corail hover:text-brume"
             >
-              Voir mes projets
+              Ce que l&apos;IA peut vous apporter
             </a>
           </Magnetic>
           <Magnetic>
             <a
-              href="#contact"
+              href="#projets"
               className="inline-block rounded-full border border-ligne px-8 py-4 font-semibold text-brume transition-colors hover:border-menthe hover:text-menthe"
             >
-              Me contacter
+              Voir mes projets
             </a>
           </Magnetic>
         </div>

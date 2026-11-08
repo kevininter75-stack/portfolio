@@ -1,5 +1,6 @@
 import Nav from "@/components/ui/Nav";
 import Hero from "@/components/sections/Hero";
+import Services from "@/components/sections/Services";
 import About from "@/components/sections/About";
 import Projects from "@/components/sections/Projects";
 import Method from "@/components/sections/Method";
@@ -13,6 +14,7 @@ export default function Home() {
       <Nav />
       <main id="contenu">
         <Hero />
+        <Services />
         <About />
         <Projects />
         <Method />

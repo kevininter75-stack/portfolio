@@ -11,7 +11,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: profile.name,
-  jobTitle: "Développeur web & IA (en reconversion)",
+  jobTitle: "Développeur freelance — intégration de l'IA en entreprise et sites web",
   email: `mailto:${profile.email}`,
   url: "https://kevin-intertaglia.vercel.app",
   address: {
@@ -35,13 +35,13 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://kevin-intertaglia.vercel.app"),
-  title: "Kévin Intertaglia — Développeur web & IA | Portfolio",
+  title: "Kévin Intertaglia — Intégration IA en entreprise & sites web | La Réunion",
   description:
-    "De l'hôtellerie de luxe au développement web assisté par IA. Portfolio de Kévin Intertaglia : 4 projets construits de A à Z avec Claude Code — PWA, Next.js, Supabase, Phaser. La Réunion.",
+    "Développeur freelance à La Réunion : j'aide les entreprises à intégrer l'IA (Claude) dans leur quotidien, j'automatise les tâches répétitives et je crée des sites web.",
   openGraph: {
-    title: "Kévin Intertaglia — Développeur web & IA",
+    title: "Kévin Intertaglia — IA en entreprise & sites web",
     description:
-      "De l'hôtellerie de luxe au développement web assisté par IA. 4 projets concrets, de l'idée au déploiement.",
+      "Intégration de l'IA en entreprise, automatisations et sites web. Freelance à La Réunion.",
     locale: "fr_FR",
     type: "website",
   },
