@@ -11,7 +11,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: profile.name,
-  jobTitle: "Développeur freelance — intégration de l'IA en entreprise et sites web",
+  jobTitle: "Fondateur d'INTER IA — intégration de l'IA en entreprise et sites web",
   email: `mailto:${profile.email}`,
   url: "https://kevin-intertaglia.vercel.app",
   address: {
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://kevin-intertaglia.vercel.app"),
   title: "Kévin Intertaglia — Intégration IA en entreprise & sites web | La Réunion",
   description:
-    "Développeur freelance à La Réunion : j'aide les entreprises à intégrer l'IA (Claude) dans leur quotidien, j'automatise les tâches répétitives et je crée des sites web.",
+    "INTER IA, à La Réunion : j'aide les entreprises à intégrer l'IA (Claude) dans leur quotidien, j'automatise les tâches répétitives et je crée des sites web.",
   openGraph: {
     title: "Kévin Intertaglia — IA en entreprise & sites web",
     description:

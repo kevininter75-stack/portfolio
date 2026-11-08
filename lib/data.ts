@@ -6,7 +6,7 @@
 export const profile = {
   name: "Kévin Intertaglia",
   firstName: "Kévin",
-  role: "Développeur freelance — IA en entreprise & sites web",
+  role: "Fondateur d'INTER IA — IA en entreprise & sites web",
   location: "Saint-Gilles-les-Bains, La Réunion",
   phone: "+262692319616",
   phoneDisplay: "0692 31 96 16",
@@ -28,7 +28,7 @@ export const journey = [
   {
     number: "01",
     title: "L'hôtellerie de luxe",
-    text: "Le service à l'Hôtel Le Lux 5★, le bar à l'Hôtel Boucan Canot 4★, puis la responsabilité du bar de Ti Mahi Mahi à Saint-Gilles. Avant ça, le bâtiment et l'immobilier. Des années de terrain qui m'ont appris à comprendre comment une équipe travaille vraiment.",
+    text: "Le service à l'Hôtel Le Lux 5★, le bar à l'Hôtel Boucan Canot 4★, et aujourd'hui la responsabilité du bar de Ti Mahi Mahi à Saint-Gilles. Avant ça, le bâtiment et l'immobilier. Des années de terrain qui m'ont appris à comprendre comment une équipe travaille vraiment.",
   },
   {
     number: "02",
@@ -37,8 +37,8 @@ export const journey = [
   },
   {
     number: "03",
-    title: "À mon compte",
-    text: "Je me suis lancé en freelance fin 2026. J'aide les entreprises à intégrer l'IA dans leur quotidien et je crée des sites web. Mon regard d'ancien du terrain fait la différence : je pars du métier et des gens, pas de la technologie.",
+    title: "INTER IA",
+    text: "En parallèle de mon poste, j'ai créé INTER IA, ma micro-entreprise. J'aide les entreprises à intégrer l'IA dans leur quotidien (première mission : déployer Claude dans une agence immobilière et de location saisonnière haut de gamme) et je crée des sites web. Je pars du métier et des gens, pas de la technologie.",
   },
 ];
 

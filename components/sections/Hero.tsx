@@ -59,16 +59,16 @@ export default function Hero() {
     <section ref={root} className="halo relative flex min-h-svh flex-col justify-between pt-24">
       <div className="mx-auto flex w-full max-w-6xl grow flex-col justify-center px-6">
         <p data-hero-fade className="mb-6 text-sm font-semibold uppercase tracking-[0.25em] text-menthe">
-          {profile.name} — {profile.location}
+          {profile.name} · INTER IA — {profile.location}
         </p>
         <h1 className="font-display max-w-4xl text-[clamp(2.6rem,7vw,5.5rem)] font-bold leading-[1.02] tracking-tight">
           Mettre l&apos;<span className="text-corail">IA</span> au travail{" "}
           <span className="text-menthe">dans votre entreprise</span>.
         </h1>
         <p data-hero-fade className="mt-8 max-w-xl text-lg text-brume-60">
-          Développeur freelance à La Réunion. J&apos;intègre l&apos;IA dans le quotidien des
-          équipes, j&apos;automatise ce qui fait perdre du temps et je crée des sites web.
-          Ancien de l&apos;hôtellerie de luxe : je pars du terrain, pas de la technologie.
+          Avec INTER IA, j&apos;intègre l&apos;IA dans le quotidien des équipes, j&apos;automatise ce
+          qui fait perdre du temps et je crée des sites web. Issu de l&apos;hôtellerie de luxe, où
+          je travaille encore : je pars du terrain, pas de la technologie.
         </p>
         <div data-hero-fade className="mt-10 flex flex-wrap items-center gap-4">
           <Magnetic>

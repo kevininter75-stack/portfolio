@@ -1,0 +1,172 @@
+<!doctype html>
+<!--
+  Source du CV. Pour régénérer le PDF :
+  google-chrome --headless --no-pdf-header-footer --print-to-pdf=public/cv-kevin-intertaglia.pdf scripts/cv/cv.html
+-->
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>CV — Kévin Intertaglia</title>
+<style>
+  @page { size: A4; margin: 0; }
+  :root { --ink:#141a24; --muted:#5b6575; --accent:#0e8f76; --side:#0d1219; --sideText:#dfe6f0; --line:#e3e7ee; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 210mm; height: 297mm; }
+  body { font-family: "Inter", sans-serif; color: var(--ink); font-size: 8.6pt; line-height: 1.38; display: grid; grid-template-columns: 62mm 1fr; }
+  aside { background: var(--side); color: var(--sideText); padding: 13mm 7mm 10mm 8mm; }
+  main { padding: 12mm 10mm 9mm 9mm; }
+  h1 { font-family: "Inter Display", "Inter", sans-serif; font-size: 23pt; line-height: 1.02; font-weight: 800; letter-spacing: -0.02em; color: #fff; }
+  h1 span { color: #4fe3c1; }
+  .tag { margin-top: 3.5mm; font-weight: 600; font-size: 9pt; color: #4fe3c1; line-height: 1.3; }
+  .tag2 { margin-top: 1.5mm; font-size: 8pt; color: #9aa6b8; }
+  aside h2 { font-size: 7.6pt; letter-spacing: 0.16em; text-transform: uppercase; color: #4fe3c1; margin: 7mm 0 2.2mm; font-weight: 700; }
+  aside p, aside li { color: var(--sideText); font-size: 8.2pt; }
+  aside ul { list-style: none; }
+  aside li { margin-bottom: 1.4mm; }
+  aside .k { display: block; font-weight: 600; color: #fff; font-size: 8pt; }
+  aside .v { color: #b9c3d2; font-size: 7.9pt; }
+  aside a { color: var(--sideText); text-decoration: none; }
+  main h2 { font-family: "Inter Display", "Inter", sans-serif; font-size: 9pt; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); font-weight: 800; border-bottom: 1px solid var(--line); padding-bottom: 1.2mm; margin: 5mm 0 2.6mm; }
+  main h2:first-child { margin-top: 0; }
+  .profil { font-size: 8.9pt; line-height: 1.45; }
+  .job { margin-bottom: 2.6mm; break-inside: avoid; }
+  .job-h { display: flex; justify-content: space-between; align-items: baseline; gap: 4mm; }
+  .job-t { font-weight: 700; font-size: 9.1pt; }
+  .job-t em { font-style: normal; font-weight: 500; color: var(--muted); }
+  .job-d { font-size: 7.8pt; color: var(--muted); white-space: nowrap; font-weight: 600; }
+  ul.b { margin-top: 0.8mm; padding-left: 3.6mm; }
+  ul.b li { margin-bottom: 0.5mm; }
+  ul.b li::marker { color: var(--accent); }
+  .highlight { border-left: 2.5px solid var(--accent); padding-left: 3mm; }
+  .proj { display: grid; grid-template-columns: 1fr 1fr; gap: 2.2mm 5mm; }
+  .proj div b { font-size: 8.8pt; }
+  .proj div p { color: var(--ink); }
+  .proj .s { color: var(--muted); font-size: 7.6pt; margin-top: 0.4mm; }
+  .small li { font-size: 8.2pt; }
+  body { overflow: hidden; }
+</style>
+</head>
+<body>
+<aside>
+  <h1>Kévin<br><span>Intertaglia</span></h1>
+  <p class="tag">Fondateur d'INTER IA<br>Intégration de l'IA en entreprise &amp; sites web</p>
+  <p class="tag2">Responsable de bar — Ti Mahi Mahi</p>
+
+  <h2>Contact</h2>
+  <ul>
+    <li>Saline-les-Bains, La Réunion</li>
+    <li>06 92 31 96 16</li>
+    <li>kevin.inter@hotmail.fr</li>
+    <li><a href="https://kevin-intertaglia.vercel.app">kevin-intertaglia.vercel.app</a></li>
+    <li>github.com/kevininter75-stack</li>
+    <li>Permis B &amp; A2, véhiculé</li>
+  </ul>
+
+  <h2>Compétences</h2>
+  <ul>
+    <li><span class="k">IA en entreprise</span><span class="v">Claude (offre Team) : administration, sièges et accès, connecteurs, MCP · API Claude · prompt engineering · formation des équipes</span></li>
+    <li><span class="k">Automatisation</span><span class="v">n8n, Make.com, Zapier, LangChain</span></li>
+    <li><span class="k">Développement web</span><span class="v">TypeScript, React, Next.js, HTML/CSS, Tailwind, Phaser 3, Capacitor</span></li>
+    <li><span class="k">Données &amp; déploiement</span><span class="v">Supabase, Git/GitHub, Vercel, Vite, PWA</span></li>
+    <li><span class="k">Développement assisté par IA</span><span class="v">Claude Code au quotidien</span></li>
+    <li><span class="k">Web &amp; commerce</span><span class="v">Shopify, marketing digital</span></li>
+  </ul>
+
+  <h2>Langues</h2>
+  <ul>
+    <li><span class="k">Français</span><span class="v">Langue maternelle</span></li>
+    <li><span class="k">Créole</span><span class="v">Bilingue</span></li>
+    <li><span class="k">Anglais</span><span class="v">Intermédiaire</span></li>
+  </ul>
+
+  <h2>Centres d'intérêt</h2>
+  <p>Veille technologique &amp; IA · Rugby · Lecture · Bricolage</p>
+</aside>
+
+<main>
+  <h2>Profil</h2>
+  <p class="profil">
+    Responsable de bar en hôtellerie haut de gamme depuis 2019, toujours en poste à Ti Mahi Mahi.
+    En parallèle, j'ai créé <b>INTER IA</b>, ma micro-entreprise : j'aide les entreprises à
+    <b>intégrer l'IA dans leur quotidien</b> (Claude), j'automatise les tâches répétitives et je crée
+    des sites web. Formé en autodidacte sur des projets réels, je pars du terrain et des usages des
+    équipes avant de proposer un outil, avec la rigueur et le sens du service du métier de bar.
+  </p>
+
+  <h2>Expérience professionnelle</h2>
+
+  <div class="job highlight">
+    <div class="job-h"><span class="job-t">Fondateur — INTER IA <em>(micro-entreprise)</em></span><span class="job-d">2026 – Actuel</span></div>
+    <ul class="b">
+      <li><b>Runimmo</b> (immobilier &amp; location saisonnière haut de gamme, La Réunion) : intégration de Claude dans l'entreprise. Déploiement de l'offre Team, gestion des sièges, rôles et domaines, connexion des outils métier (gestion locative, réservations), accompagnement des utilisateurs.</li>
+      <li>Missions au forfait : diagnostic des usages, mise en place, formation et suivi.</li>
+      <li>Création de sites web pour des clients professionnels (sites vitrines, e-commerce).</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-h"><span class="job-t">Responsable barman — Restaurant Ti Mahi Mahi</span><span class="job-d">04/2022 – Actuel</span></div>
+    <ul class="b">
+      <li>Gestion autonome complète du bar : création de cocktails (fiches techniques, ratios), commandes, stocks.</li>
+      <li>Relation client, facturation, encaissement et contrôle de caisse — interlocuteur unique sur le bar.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-h"><span class="job-t">Agent commercial indépendant — IAD Immobilier</span><span class="job-d">09/2021 – 06/2022</span></div>
+    <ul class="b"><li>Estimation de biens, rédaction d'annonces, prospection terrain en totale autonomie.</li></ul>
+  </div>
+
+  <div class="job">
+    <div class="job-h"><span class="job-t">Barman CDI — Hôtel Boucan Canot (4★)</span><span class="job-d">03/2019 – 09/2021</span></div>
+    <ul class="b"><li>Stocks, fournisseurs, inventaires, formation des nouveaux arrivants ; clientèle internationale exigeante.</li></ul>
+  </div>
+
+  <div class="job">
+    <div class="job-h"><span class="job-t">Séminariste CDI — Hôtel Boucan Canot</span><span class="job-d">01/2018 – 03/2019</span></div>
+    <ul class="b"><li>Création du poste et de ses procédures de A à Z (séminaires &amp; banquets), planning en autonomie.</li></ul>
+  </div>
+
+  <div class="job">
+    <div class="job-h"><span class="job-t">Serveur polyvalent extra — Hôtel Le Lux (5★)</span><span class="job-d">11/2017 – 01/2018</span></div>
+  </div>
+
+  <div class="job">
+    <div class="job-h"><span class="job-t">Auto-entrepreneur — e-commerce Shopify</span><span class="job-d">05/2016 – 11/2017</span></div>
+    <ul class="b"><li>Création et gestion d'une boutique en ligne : premiers pas dans le web.</li></ul>
+  </div>
+
+  <h2>Projets (portfolio)</h2>
+  <div class="proj">
+    <div>
+      <b>Déclic</b>
+      <p>App de conversation en français pour expatriés, avec IA intégrée : coach de correction et scénarios générés par l'API Claude.</p>
+      <p class="s">Next.js · API Claude · Supabase · n8n · Vercel</p>
+    </div>
+    <div>
+      <b>Kout Sab'</b>
+      <p>Jeu mobile de fruits péi à trancher : classement en ligne, défi du jour, PWA et application Android.</p>
+      <p class="s">Phaser 3 · TypeScript · Supabase · Capacitor</p>
+    </div>
+    <div>
+      <b>Sérène</b>
+      <p>PWA de bien-être : exercices guidés, gamification. Prototypée sur Emergent, finalisée avec Claude Code.</p>
+      <p class="s">React · FastAPI · PWA · Vercel</p>
+    </div>
+    <div>
+      <b>Le Bichique</b>
+      <p>Site vitrine d'un restaurant fictif à Saint-Gilles : storytelling en scroll et motion design, conçu sur cahier des charges.</p>
+      <p class="s">Next.js · GSAP · Tailwind CSS</p>
+    </div>
+  </div>
+
+  <h2>Formation</h2>
+  <ul class="b small">
+    <li>Autoformation continue en développement web &amp; IA : pratique intensive sur projets réels (Claude Code, API Claude, n8n, Make.com)</li>
+    <li>Baccalauréat technologique — Mercatique</li>
+    <li>Certificat de praticien en hypnothérapie — École Française d'Hypnose (2015-2016)</li>
+    <li>CAP Serrurerie métallerie — CFA Sainte-Clotilde (2013-2015, apprentissage)</li>
+  </ul>
+</main>
+</body>
+</html>
