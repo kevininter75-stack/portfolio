@@ -9,27 +9,35 @@ import { method, profile } from "@/lib/data";
 export default function Method() {
   return (
     <section id="methode" className="scroll-mt-24 border-t border-ligne">
-      <div className="mx-auto max-w-6xl px-6 py-28 md:py-36">
+      <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
         <TextReveal
           as="h2"
           className="font-display max-w-3xl text-[clamp(2rem,5vw,3.5rem)] font-bold leading-tight tracking-tight"
         >
-          L&apos;IA accélère. <span className="text-menthe">Moi, je pilote.</span>
+          Une IA utile.
+          <br />
+          <span className="text-menthe">Une équipe qui se l’approprie.</span>
         </TextReveal>
         <Reveal>
           <p className="mt-6 max-w-xl text-brume-60">
-            Développer avec l&apos;IA ne veut pas dire lui laisser le volant. Voici comment je
-            travaille, sur chacun de mes projets — y compris ce site.
+            Un déploiement progressif, construit avec les personnes qui
+            utiliseront les outils chaque jour.
           </p>
         </Reveal>
 
         <div className="mt-16 grid gap-10 md:grid-cols-3 md:gap-8">
           {method.map((step, i) => (
             <Reveal key={step.number} delay={i * 0.1}>
-              <div className="h-full rounded-2xl border border-ligne bg-surface p-8 transition-colors hover:border-menthe/40">
-                <p className="font-display text-5xl font-bold text-menthe/30">{step.number}</p>
-                <h3 className="font-display mt-4 text-2xl font-bold">{step.title}</h3>
-                <p className="mt-3 leading-relaxed text-brume-60">{step.text}</p>
+              <div className="h-full rounded-2xl border border-ligne bg-surface/50 p-7 transition-colors hover:border-menthe/40">
+                <p className="font-display text-4xl font-medium text-menthe/60">
+                  {step.number}
+                </p>
+                <h3 className="font-display mt-4 text-2xl font-bold">
+                  {step.title}
+                </h3>
+                <p className="mt-3 leading-relaxed text-brume-60">
+                  {step.text}
+                </p>
               </div>
             </Reveal>
           ))}

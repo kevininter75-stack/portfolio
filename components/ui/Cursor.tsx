@@ -22,10 +22,22 @@ export default function Cursor() {
   useEffect(() => {
     if (!enabled || !halo.current || !dot.current) return;
 
-    const dotX = gsap.quickTo(dot.current, "x", { duration: 0.09, ease: "power2.out" });
-    const dotY = gsap.quickTo(dot.current, "y", { duration: 0.09, ease: "power2.out" });
-    const haloX = gsap.quickTo(halo.current, "x", { duration: 0.6, ease: "power3.out" });
-    const haloY = gsap.quickTo(halo.current, "y", { duration: 0.6, ease: "power3.out" });
+    const dotX = gsap.quickTo(dot.current, "x", {
+      duration: 0.09,
+      ease: "power2.out",
+    });
+    const dotY = gsap.quickTo(dot.current, "y", {
+      duration: 0.09,
+      ease: "power2.out",
+    });
+    const haloX = gsap.quickTo(halo.current, "x", {
+      duration: 0.6,
+      ease: "power3.out",
+    });
+    const haloY = gsap.quickTo(halo.current, "y", {
+      duration: 0.6,
+      ease: "power3.out",
+    });
 
     const onMove = (e: MouseEvent) => {
       dotX(e.clientX);
@@ -40,7 +52,7 @@ export default function Cursor() {
     const onOver = (e: MouseEvent) => {
       if (isInteractive(e.target) && dot.current && halo.current) {
         gsap.to(dot.current, {
-          scale: 5,
+          scale: 2.5,
           backgroundColor: "#e8edf5",
           duration: 0.35,
           ease: "power3.out",
@@ -79,7 +91,8 @@ export default function Cursor() {
         ref={halo}
         className="absolute -ml-24 -mt-24 h-48 w-48 rounded-full mix-blend-screen"
         style={{
-          background: "radial-gradient(circle, rgba(79,227,193,0.14) 0%, transparent 65%)",
+          background:
+            "radial-gradient(circle, rgba(79,227,193,0.07) 0%, transparent 65%)",
         }}
       />
       {/* Point précis : s'agrandit et inverse les couleurs sur les éléments cliquables */}

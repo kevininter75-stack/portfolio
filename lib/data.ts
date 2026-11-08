@@ -15,13 +15,12 @@ export const profile = {
   githubHandle: "kevininter75-stack",
   linkedin: "https://www.linkedin.com/in/kévin-intertaglia-0a3aab221",
   // Photo de profil : déposer le fichier dans /public/images/profile.jpg
-  photo: "/images/profile.jpg",
+  photo: "/images/portrait-kevin.webp",
   // CV : déposer le fichier PDF dans /public/cv-kevin-intertaglia.pdf
   cvFile: "/cv-kevin-intertaglia.pdf",
   // Code source de ce portfolio (affiché dans le footer)
   siteRepo: "https://github.com/kevininter75-stack/portfolio",
 };
-
 
 /** Étapes numérotées du parcours, façon storytelling « Le Bichique » */
 export const journey = [
@@ -81,7 +80,10 @@ export const projects: Project[] = [
     url: "https://declic-liart.vercel.app/",
     screenshots: [
       { src: "/images/projects/declic-1.png", alt: "Page d'accueil de Déclic" },
-      { src: "/images/projects/declic-2.png", alt: "Interface de conversation de Déclic" },
+      {
+        src: "/images/projects/declic-2.png",
+        alt: "Interface de conversation de Déclic",
+      },
     ],
     mobile: false,
     accent: "#F2B950",
@@ -100,8 +102,14 @@ export const projects: Project[] = [
     url: "https://kevininter75-stack.github.io/fruit-ninja-reunion/",
     github: "https://github.com/kevininter75-stack/fruit-ninja-reunion",
     screenshots: [
-      { src: "/images/projects/kout-sab-1.png", alt: "Menu de Kout Sab' : modes Classique, Chrono et Défi du jour" },
-      { src: "/images/projects/kout-sab-2.png", alt: "Partie en cours de Kout Sab'" },
+      {
+        src: "/images/projects/kout-sab-1.png",
+        alt: "Menu de Kout Sab' : modes Classique, Chrono et Défi du jour",
+      },
+      {
+        src: "/images/projects/kout-sab-2.png",
+        alt: "Partie en cours de Kout Sab'",
+      },
     ],
     mobile: true,
     accent: "#7ED957",
@@ -119,8 +127,14 @@ export const projects: Project[] = [
     stack: ["Three.js", "TypeScript", "Blender", "Supabase", "Vite", "PWA"],
     url: "https://kaniar-rush.vercel.app/",
     screenshots: [
-      { src: "/images/projects/kaniar-rush-1.png", alt: "Écran d'accueil de Kaniar Rush : le kaniar perché dans le letchi" },
-      { src: "/images/projects/kaniar-rush-2.png", alt: "Course sur le Boulevard Sud, la gramoun à ses trousses" },
+      {
+        src: "/images/projects/kaniar-rush-1.png",
+        alt: "Écran d'accueil de Kaniar Rush : le kaniar perché dans le letchi",
+      },
+      {
+        src: "/images/projects/kaniar-rush-2.png",
+        alt: "Course sur le Boulevard Sud, la gramoun à ses trousses",
+      },
     ],
     mobile: true,
     accent: "#F5C33B",
@@ -138,8 +152,14 @@ export const projects: Project[] = [
     stack: ["Three.js", "TypeScript", "Vite", "Playwright", "PWA"],
     url: "https://tizon-eight.vercel.app/",
     screenshots: [
-      { src: "/images/projects/tizon-1.jpg", alt: "Écran titre de Tizon et les Îles du Ciel Brisé" },
-      { src: "/images/projects/tizon-2.jpg", alt: "Tizon dans le Nid, avec l'Aïeule Orma" },
+      {
+        src: "/images/projects/tizon-1.jpg",
+        alt: "Écran titre de Tizon et les Îles du Ciel Brisé",
+      },
+      {
+        src: "/images/projects/tizon-2.jpg",
+        alt: "Tizon dans le Nid, avec l'Aïeule Orma",
+      },
     ],
     mobile: false,
     accent: "#FF8A3D",
@@ -183,8 +203,14 @@ export const projects: Project[] = [
     url: "https://le-bichique.vercel.app/",
     github: "https://github.com/kevininter75-stack/le-bichique",
     screenshots: [
-      { src: "/images/projects/bichique-1.jpg", alt: "Hero du site Le Bichique" },
-      { src: "/images/projects/bichique-2.jpg", alt: "Section storytelling du Bichique" },
+      {
+        src: "/images/projects/bichique-1.jpg",
+        alt: "Hero du site Le Bichique",
+      },
+      {
+        src: "/images/projects/bichique-2.jpg",
+        alt: "Section storytelling du Bichique",
+      },
     ],
     mobile: false,
     accent: "#FF6B5E",
@@ -215,18 +241,18 @@ export const skills = [
 export const method = [
   {
     number: "01",
-    title: "Je cadre",
-    text: "L'idée, le besoin, le cahier des charges : je définis quoi construire et pourquoi, je découpe le projet en étapes concrètes. C'est le même réflexe qu'au bar — la mise en place avant le service.",
+    title: "Comprendre votre métier",
+    text: "Nous regardons vos tâches, vos outils et vos contraintes. Je repère avec vous un premier usage concret, avec un objectif et un périmètre clairs.",
   },
   {
     number: "02",
-    title: "Je construis avec l'IA",
-    text: "Claude Code écrit vite ; moi je pilote. Choix techniques, revue de chaque fonctionnalité, tests sur de vrais appareils, itérations jusqu'à ce que ce soit propre. L'IA est un accélérateur, pas un pilote automatique.",
+    title: "Intégrer et tester",
+    text: "Je configure les assistants et les connexions utiles. Nous testons sur des cas de votre quotidien, avec des consignes adaptées et une validation humaine.",
   },
   {
     number: "03",
-    title: "Je mets en ligne",
-    text: "Déploiement en production (Vercel, PWA, stores), corrections après retours, et amélioration continue. Un projet n'est terminé que quand quelqu'un peut s'en servir.",
+    title: "Accompagner l’équipe",
+    text: "Je vous forme à l’utilisation des outils, recueille les retours et ajuste le fonctionnement. Nous étendons ensuite les usages selon vos besoins.",
   },
 ];
 

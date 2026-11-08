@@ -6,18 +6,23 @@ import { profile } from "@/lib/data";
 /** Contact simple et direct : email, téléphone, GitHub. Pas de formulaire. */
 export default function Contact() {
   return (
-    <section id="contact" className="halo scroll-mt-24 border-t border-ligne py-28 md:py-40">
+    <section
+      id="contact"
+      className="halo scroll-mt-24 border-t border-ligne py-20 md:py-28"
+    >
       <div className="mx-auto max-w-6xl px-6 text-center">
         <TextReveal
           as="h2"
           className="font-display mx-auto max-w-3xl text-[clamp(2.2rem,6vw,4.5rem)] font-bold leading-tight tracking-tight"
         >
-          Un projet <span className="text-menthe">en tête</span> ?
+          Et si l’IA simplifiait
+          <br />
+          <span className="text-menthe">votre quotidien</span> ?
         </TextReveal>
         <Reveal>
           <p className="mx-auto mt-6 max-w-xl text-brume-60">
-            Intégrer l&apos;IA dans votre équipe, automatiser une tâche, créer votre site : parlons-en. Premier échange sans engagement. ·{" "}
-            {profile.location}
+            Parlons de votre métier, de vos outils et du temps que vous aimeriez
+            retrouver. Premier échange sans engagement. · {profile.location}
           </p>
         </Reveal>
 
@@ -40,7 +45,9 @@ export default function Contact() {
             >
               {profile.phoneDisplay}
             </a>
-            <span aria-hidden className="text-ligne">|</span>
+            <span aria-hidden className="text-ligne">
+              |
+            </span>
             <a
               href={profile.github}
               target="_blank"
@@ -52,7 +59,9 @@ export default function Contact() {
             {/* Affiché seulement quand l'URL LinkedIn est renseignée dans lib/data.ts */}
             {profile.linkedin && (
               <>
-                <span aria-hidden className="text-ligne">|</span>
+                <span aria-hidden className="text-ligne">
+                  |
+                </span>
                 <a
                   href={profile.linkedin}
                   target="_blank"

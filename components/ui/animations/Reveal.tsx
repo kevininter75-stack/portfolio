@@ -13,7 +13,12 @@ type Props = {
 };
 
 /** Fade-up générique déclenché à l'entrée dans le viewport. */
-export default function Reveal({ children, className, delay = 0, y = 44 }: Props) {
+export default function Reveal({
+  children,
+  className,
+  delay = 0,
+  y = 22,
+}: Props) {
   const ref = useRef<HTMLDivElement>(null);
   const reduced = useReducedMotion();
 
@@ -26,17 +31,21 @@ export default function Reveal({ children, className, delay = 0, y = 44 }: Props
       {
         y: 0,
         autoAlpha: 1,
-        duration: 1.05,
+        duration: 0.65,
         ease: "power3.out",
         delay,
         // Rejouable : play à chaque entrée, reverse (réarmement) quand
         // l'élément ressort par le bas du viewport en remontant
-        scrollTrigger: { trigger: el, start: "top 90%", toggleActions: "play none none reverse" },
-      }
+        scrollTrigger: {
+          trigger: el,
+          start: "top 90%",
+          toggleActions: "play none none reverse",
+        },
+      },
     );
     return () => {
       tween.scrollTrigger?.kill();
-      tween.kill();
+      tween.revert();
     };
   }, [reduced, delay, y]);
 
