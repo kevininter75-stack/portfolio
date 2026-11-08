@@ -79,7 +79,6 @@ export const projects: Project[] = [
     ],
     stack: ["Next.js", "API Claude", "Supabase", "n8n", "Vercel"],
     url: "https://declic-liart.vercel.app/",
-    github: "https://github.com/kevininter75-stack/declic",
     screenshots: [
       { src: "/images/projects/declic-1.png", alt: "Page d'accueil de Déclic" },
       { src: "/images/projects/declic-2.png", alt: "Interface de conversation de Déclic" },
@@ -108,6 +107,44 @@ export const projects: Project[] = [
     accent: "#7ED957",
   },
   {
+    slug: "kaniar-rush",
+    title: "Kaniar Rush",
+    pitch:
+      "Endless runner 3D péi : un kaniar a chapardé les letchis d'une gramoun, qui le poursuit savate à la main sur le Boulevard Sud de Saint-Denis. Tous les modèles 3D sont générés par scripts Blender.",
+    highlights: [
+      "3D temps réel avec Three.js, sans moteur de jeu",
+      "Personnages animés, décors et véhicules modélisés par code (Blender)",
+      "Missions, mot du jour, boutique et classement en ligne",
+    ],
+    stack: ["Three.js", "TypeScript", "Blender", "Supabase", "Vite", "PWA"],
+    url: "https://kaniar-rush.vercel.app/",
+    screenshots: [
+      { src: "/images/projects/kaniar-rush-1.png", alt: "Écran d'accueil de Kaniar Rush : le kaniar perché dans le letchi" },
+      { src: "/images/projects/kaniar-rush-2.png", alt: "Course sur le Boulevard Sud, la gramoun à ses trousses" },
+    ],
+    mobile: true,
+    accent: "#F5C33B",
+  },
+  {
+    slug: "tizon",
+    title: "Tizon",
+    pitch:
+      "Platformer 3D rétro façon PlayStation 1, jouable dans le navigateur : un petit dragon doit récupérer 4 runes à travers des îles flottantes. Création 100 % originale, du personnage à la musique.",
+    highlights: [
+      "6 niveaux, 4 gardiens et un boss final en 3 phases",
+      "Modèles, textures, 11 musiques et ~45 bruitages générés par le code",
+      "Tests automatisés (Playwright) et contrôles tactiles, installable en PWA",
+    ],
+    stack: ["Three.js", "TypeScript", "Vite", "Playwright", "PWA"],
+    url: "https://tizon-eight.vercel.app/",
+    screenshots: [
+      { src: "/images/projects/tizon-1.jpg", alt: "Écran titre de Tizon et les Îles du Ciel Brisé" },
+      { src: "/images/projects/tizon-2.jpg", alt: "Tizon dans le Nid, avec l'Aïeule Orma" },
+    ],
+    mobile: false,
+    accent: "#FF8A3D",
+  },
+  {
     slug: "serene",
     title: "Sérène",
     pitch:
@@ -119,7 +156,6 @@ export const projects: Project[] = [
     ],
     stack: ["PWA", "React", "FastAPI", "Emergent.sh", "Claude Code", "Vercel"],
     url: "https://mindfull-topaz.vercel.app/auth",
-    github: "https://github.com/kevininter75-stack/mindfull",
     screenshots: [
       {
         src: "/images/projects/serene-1.png",
@@ -163,10 +199,12 @@ export const skills = [
   "Tailwind CSS",
   "Supabase",
   "Phaser 3",
+  "Three.js",
   "API Claude",
   "n8n",
   "Make",
   "Vite",
+  "Blender",
   "Capacitor",
   "Git / GitHub",
   "Claude Code",
