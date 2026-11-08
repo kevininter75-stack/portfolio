@@ -1,3 +1,4 @@
+import ArrowUpRight from "@/components/ui/ArrowUpRight";
 import { profile } from "@/lib/data";
 import EasterEgg from "@/components/ui/EasterEgg";
 
@@ -29,7 +30,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="font-semibold transition-colors hover:text-menthe"
           >
-            Code source ↗
+            Code source <ArrowUpRight />
           </a>
         </p>
       </div>

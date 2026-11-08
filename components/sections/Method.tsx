@@ -1,3 +1,4 @@
+import ArrowUpRight from "@/components/ui/ArrowUpRight";
 import Reveal from "@/components/ui/animations/Reveal";
 import TextReveal from "@/components/ui/animations/TextReveal";
 import { method, profile } from "@/lib/data";
@@ -52,7 +53,7 @@ export default function Method() {
               rel="noopener noreferrer"
               className="font-semibold text-menthe underline-offset-4 hover:underline"
             >
-              le code de ce portfolio est public ↗
+              le code de ce portfolio est public <ArrowUpRight />
             </a>{" "}
             — structure, commits, choix techniques : tout se visite.
           </p>

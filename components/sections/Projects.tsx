@@ -1,3 +1,4 @@
+import ArrowUpRight from "@/components/ui/ArrowUpRight";
 import Image from "next/image";
 import Reveal from "@/components/ui/animations/Reveal";
 import { projects } from "@/lib/data";
@@ -78,7 +79,10 @@ export default function Projects() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Jouer à Kout Sab’ <span aria-hidden="true">↗</span>
+                  Jouer à Kout Sab’{" "}
+                  <span aria-hidden="true">
+                    <ArrowUpRight />
+                  </span>
                 </a>
                 <a
                   className="text-xs text-brume-60 underline underline-offset-4 hover:text-menthe"
@@ -115,7 +119,7 @@ export default function Projects() {
                     className="gallery-preview"
                   />
                   <span className="gallery-open" aria-hidden="true">
-                    ↗
+                    <ArrowUpRight />
                   </span>
                 </a>
                 <div className="p-6 sm:p-7">
@@ -163,7 +167,9 @@ export default function Projects() {
                       {project.stack.includes("Three.js")
                         ? "Découvrir le jeu"
                         : "Découvrir le projet"}{" "}
-                      <span aria-hidden="true">↗</span>
+                      <span aria-hidden="true">
+                        <ArrowUpRight />
+                      </span>
                     </a>
                     {project.github && (
                       <a

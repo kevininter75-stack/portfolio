@@ -1,3 +1,4 @@
+import ArrowUpRight from "@/components/ui/ArrowUpRight";
 import Reveal from "@/components/ui/animations/Reveal";
 import TextReveal from "@/components/ui/animations/TextReveal";
 import Magnetic from "@/components/ui/animations/Magnetic";
@@ -54,7 +55,7 @@ export default function Contact() {
               rel="noopener noreferrer"
               className="font-semibold transition-colors hover:text-menthe"
             >
-              github.com/{profile.githubHandle} ↗
+              github.com/{profile.githubHandle} <ArrowUpRight />
             </a>
             {/* Affiché seulement quand l'URL LinkedIn est renseignée dans lib/data.ts */}
             {profile.linkedin && (
@@ -68,7 +69,7 @@ export default function Contact() {
                   rel="noopener noreferrer"
                   className="font-semibold transition-colors hover:text-menthe"
                 >
-                  LinkedIn ↗
+                  LinkedIn <ArrowUpRight />
                 </a>
               </>
             )}

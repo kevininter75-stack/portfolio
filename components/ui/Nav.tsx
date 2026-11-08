@@ -1,5 +1,7 @@
 "use client";
 
+import ArrowUpRight from "@/components/ui/ArrowUpRight";
+
 import { useState } from "react";
 const links = [
   { href: "#ia", label: "Expertise IA" },
@@ -45,7 +47,10 @@ export default function Nav() {
           href="#contact"
           className="hidden rounded-full border border-menthe/40 px-5 py-2.5 text-xs font-semibold transition-colors hover:bg-menthe hover:text-nuit md:block"
         >
-          Parlons de votre projet <span aria-hidden="true">↗</span>
+          Parlons de votre projet{" "}
+          <span aria-hidden="true">
+            <ArrowUpRight />
+          </span>
         </a>
         <button
           type="button"

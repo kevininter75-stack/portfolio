@@ -32,7 +32,7 @@ export default function Services() {
                 <div className="mb-8 flex items-center justify-between">
                   <span className="micro-label">0{i + 1} / USAGE</span>
                   <span className="benefit-symbol" aria-hidden="true">
-                    {["↗", "◎", "≡", "⇄"][i]}
+                    {["→", "◎", "≡", "⇄"][i]}
                   </span>
                 </div>
                 <h3 className="font-display text-2xl font-medium">
