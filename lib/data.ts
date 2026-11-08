@@ -38,7 +38,7 @@ export const journey = [
   {
     number: "03",
     title: "INTER IA",
-    text: "En parallèle de mon poste, j'ai créé INTER IA, ma micro-entreprise. J'aide les entreprises à intégrer l'IA dans leur quotidien (première mission : déployer Claude dans une agence immobilière et de location saisonnière haut de gamme) et je crée des sites web. Je pars du métier et des gens, pas de la technologie.",
+    text: "En parallèle de mon poste, j'ai créé INTER IA, ma micro-entreprise. J'aide les entreprises à intégrer l'IA dans leur quotidien (première mission, dans une agence immobilière et de location saisonnière haut de gamme : installer Claude, former les salariés, automatiser le traitement des mails, les synthèses entre outils et les réponses aux voyageurs) et je crée des sites web. Je pars du métier et des gens, pas de la technologie.",
   },
 ];
 
