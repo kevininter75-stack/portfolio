@@ -47,7 +47,7 @@ export default function Services() {
         </div>
         <div className="mission-panel mt-12 grid gap-8 rounded-3xl border border-menthe/20 p-7 sm:p-10 md:grid-cols-[.8fr_1.2fr]">
           <div>
-            <p className="eyebrow">Une première mission de terrain</p>
+            <p className="eyebrow">Première mission</p>
             <h3 className="font-display mt-5 text-3xl font-medium leading-tight">
               L’IA dans une agence
               <br />
@@ -65,7 +65,7 @@ export default function Services() {
               {[
                 "Un assistant par poste",
                 "Des outils connectés",
-                "L’équipe valide",
+                "Formation des salariés",
               ].map((label) => (
                 <span className="tech-tag" key={label}>
                   {label}

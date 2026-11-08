@@ -17,8 +17,8 @@ export default function Hero() {
               de <span className="text-menthe">vos équipes.</span>
             </h1>
             <p className="mt-7 max-w-lg text-lg leading-relaxed text-brume-60">
-              Des assistants adaptés à chaque métier. Des outils connectés. Du
-              temps pour ce qui compte.
+              Des assistants adaptés à chaque métier, connectés aux outils que
+              vous utilisez déjà.
             </p>
             <p className="mt-4 max-w-lg text-sm leading-relaxed text-brume-60">
               Avec INTER IA, j’accompagne votre entreprise du premier besoin à
@@ -40,7 +40,7 @@ export default function Hero() {
                 {profile.name}
                 <br />
                 <span className="text-brume">
-                  Fondateur d’INTER IA · Une approche de terrain
+                  Fondateur d’INTER IA
                 </span>
               </span>
             </div>
@@ -48,7 +48,6 @@ export default function Hero() {
           <WorkflowDemo />
         </div>
         <div className="hero-foot mt-16 flex flex-wrap justify-between gap-4 border-t border-ligne pt-6 text-xs text-brume-60">
-          <span>Comprendre. Connecter. Accompagner.</span>
           <span>
             Assistants IA <span className="mx-3 text-menthe">/</span>{" "}
             Automatisations <span className="mx-3 text-menthe">/</span> Sites

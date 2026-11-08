@@ -4,8 +4,7 @@ import ArrowUpRight from "@/components/ui/ArrowUpRight";
 
 import { useState } from "react";
 const links = [
-  { href: "#ia", label: "Expertise IA" },
-  { href: "#methode", label: "Approche" },
+  { href: "#ia", label: "IA en entreprise" },
   { href: "#projets", label: "Réalisations" },
   { href: "#a-propos", label: "À propos" },
 ];
