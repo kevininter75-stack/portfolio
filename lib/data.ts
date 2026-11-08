@@ -38,7 +38,7 @@ export const journey = [
   {
     number: "03",
     title: "INTER IA",
-    text: "En parallèle de mon poste, j'ai créé INTER IA, ma micro-entreprise. J'aide les entreprises à intégrer l'IA dans leur quotidien (première mission, dans une agence immobilière et de location saisonnière haut de gamme : installer Claude, former les salariés, automatiser le traitement des mails, les synthèses entre outils et les réponses aux voyageurs) et je crée des sites web. Je pars du métier et des gens, pas de la technologie.",
+    text: "En parallèle de mon poste, j'ai créé INTER IA, ma micro-entreprise. J'aide les entreprises à intégrer l'IA dans leur quotidien (première mission, dans une agence immobilière et de location saisonnière haut de gamme : un assistant IA personnel pour chaque salarié, qui trie les mails, fait la synthèse de plusieurs outils et propose les réponses aux voyageurs) et je crée des sites web. Je pars du métier et des gens, pas de la technologie.",
   },
 ];
 
@@ -232,8 +232,8 @@ export const services = [
   },
   {
     number: "02",
-    title: "Mise en place & formation",
-    text: "Déploiement de Claude pour votre équipe : comptes, espaces de travail partagés, consignes adaptées à votre métier, connexion à vos outils. Puis formation, pour que chacun s'en serve bien et en sécurité.",
+    title: "Un assistant IA pour chaque salarié",
+    text: "Chaque personne de votre équipe a son propre assistant, configuré pour son poste et connecté à ses outils (mails, Excel, WhatsApp, logiciel métier). Installation, consignes adaptées à votre métier, puis formation pour que chacun s'en serve bien et en sécurité.",
   },
   {
     number: "03",

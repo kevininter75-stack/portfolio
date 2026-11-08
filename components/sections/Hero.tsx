@@ -66,8 +66,8 @@ export default function Hero() {
           <span className="text-menthe">dans votre entreprise</span>.
         </h1>
         <p data-hero-fade className="mt-8 max-w-xl text-lg text-brume-60">
-          Avec INTER IA, j&apos;intègre l&apos;IA dans le quotidien des équipes, j&apos;automatise ce
-          qui fait perdre du temps et je crée des sites web. Issu de l&apos;hôtellerie de luxe, où
+          Avec INTER IA, je donne à chaque salarié son propre assistant IA, j&apos;automatise ce qui
+          fait perdre du temps et je crée des sites web. Issu de l&apos;hôtellerie de luxe, où
           je travaille encore : je pars du terrain, pas de la technologie.
         </p>
         <div data-hero-fade className="mt-10 flex flex-wrap items-center gap-4">
