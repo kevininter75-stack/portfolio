@@ -103,15 +103,15 @@ export const projects: Project[] = [
     github: "https://github.com/kevininter75-stack/fruit-ninja-reunion",
     screenshots: [
       {
-        src: "/images/projects/kout-sab-1.png",
+        src: "/images/projects/kout-sab-1.jpg",
         alt: "Menu de Kout Sab' : modes Classique, Chrono et Défi du jour",
       },
       {
-        src: "/images/projects/kout-sab-2.png",
-        alt: "Partie en cours de Kout Sab'",
+        src: "/images/projects/kout-sab-2.jpg",
+        alt: "Partie en cours de Kout Sab' : mangue, ananas et bonus cyclone en vol",
       },
     ],
-    mobile: true,
+    mobile: false,
     accent: "#7ED957",
   },
   {

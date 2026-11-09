@@ -343,6 +343,27 @@ body {
   transform: translateY(15px);
   transition: transform 0.5s;
 }
+.featured-landscape-stack {
+  display: flex;
+  flex-direction: column;
+  padding: 72px 6% 64px;
+}
+.featured-landscape {
+  width: 86%;
+  height: auto;
+  border-radius: 16px;
+  border: 5px solid #090e0b;
+  box-shadow: 0 25px 60px #0007;
+  transition: transform 0.5s;
+}
+.featured-landscape-2 {
+  align-self: flex-end;
+  margin-top: -9%;
+  transform: translateY(6px);
+}
+.featured-project:hover .featured-landscape {
+  transform: translateY(-4px);
+}
 .featured-project:hover .featured-phone {
   transform: translateY(4px);
 }
@@ -474,6 +495,7 @@ body {
     animation: none;
   }
   .featured-phone,
+  .featured-landscape,
   .gallery-preview {
     transition: none;
     transform: none;

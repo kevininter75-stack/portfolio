@@ -30,16 +30,16 @@ export default function Projects() {
           <article className="featured-project">
             <div className="featured-shots">
               <span className="project-overline">PROJET PHARE / JEU PÉI</span>
-              <div className="relative z-10 flex justify-center gap-4 px-5 pt-16 sm:gap-7">
+              <div className="featured-landscape-stack relative z-10">
                 {featured.screenshots.map((shot, i) => (
                   <Image
                     key={shot.src}
                     src={shot.src}
                     alt={shot.alt}
-                    width={300}
-                    height={650}
-                    sizes="(min-width: 1024px) 220px, 38vw"
-                    className={`featured-phone ${i === 1 ? "mt-10" : ""}`}
+                    width={1688}
+                    height={780}
+                    sizes="(min-width: 1024px) 480px, 85vw"
+                    className={`featured-landscape ${i === 1 ? "featured-landscape-2" : ""}`}
                   />
                 ))}
               </div>
